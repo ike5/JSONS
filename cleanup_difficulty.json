@@ -1,0 +1,1795 @@
+{
+  "scale": {
+    "min": 1,
+    "max": 10
+  },
+  "dimension_definitions": {
+    "time": "Estimated time to clean (seconds to minutes)",
+    "effort": "Physical scrubbing intensity required",
+    "complexity": "Shape difficulty (crevices, holes, edges)",
+    "care": "Fragility or special handling required",
+    "size": "Bulkiness and surface area"
+  },
+  "scoring": {
+    "weights": {
+      "time": 0.35,
+      "effort": 0.25,
+      "complexity": 0.15,
+      "care": 0.15,
+      "size": 0.1
+    },
+    "method": "weighted_sum_scaled_to_10"
+  },
+  "anchors": {
+    "fork": 1,
+    "small_plate": 2,
+    "cast_iron_pan": 5,
+    "large_pot": 7
+  },
+  "items": {
+    "utensils": {
+      "fork": {
+        "difficulty": 1,
+        "time": 1,
+        "effort": 1,
+        "complexity": 2,
+        "care": 1,
+        "size": 1
+      },
+      "knife": {
+        "difficulty": 1,
+        "time": 1,
+        "effort": 1,
+        "complexity": 1,
+        "care": 1,
+        "size": 1
+      },
+      "spoon": {
+        "difficulty": 1,
+        "time": 1,
+        "effort": 1,
+        "complexity": 1,
+        "care": 1,
+        "size": 1
+      },
+      "soup_spoon": {
+        "difficulty": 1,
+        "time": 1,
+        "effort": 1,
+        "complexity": 1,
+        "care": 1,
+        "size": 1
+      },
+      "butter_knife": {
+        "difficulty": 1,
+        "time": 1,
+        "effort": 1,
+        "complexity": 1,
+        "care": 1,
+        "size": 1
+      },
+      "steak_knife": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 2,
+        "complexity": 3,
+        "care": 1,
+        "size": 1
+      },
+      "serving_spoon": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 1,
+        "care": 1,
+        "size": 2
+      },
+      "ladle": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 2,
+        "care": 1,
+        "size": 2
+      },
+      "slotted_spoon": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 2,
+        "complexity": 3,
+        "care": 1,
+        "size": 1
+      },
+      "whisk": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 5,
+        "care": 1,
+        "size": 2
+      },
+      "tongs": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 2,
+        "care": 1,
+        "size": 2
+      },
+      "spatula_silicone": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 1,
+        "care": 2,
+        "size": 1
+      },
+      "spatula_metal": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 1,
+        "care": 1,
+        "size": 1
+      },
+      "spatula_fish": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 2,
+        "care": 2,
+        "size": 2
+      },
+      "garlic_press": {
+        "difficulty": 4,
+        "time": 4,
+        "effort": 4,
+        "complexity": 5,
+        "care": 1,
+        "size": 1
+      },
+      "cheese_grater": {
+        "difficulty": 4,
+        "time": 4,
+        "effort": 4,
+        "complexity": 4,
+        "care": 2,
+        "size": 2
+      },
+      "box_grater": {
+        "difficulty": 5,
+        "time": 5,
+        "effort": 4,
+        "complexity": 4,
+        "care": 2,
+        "size": 3
+      },
+      "microplane": {
+        "difficulty": 4,
+        "time": 4,
+        "effort": 3,
+        "complexity": 4,
+        "care": 2,
+        "size": 1
+      },
+      "potato_masher": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 2,
+        "complexity": 2,
+        "care": 1,
+        "size": 2
+      },
+      "peeler": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 2,
+        "care": 1,
+        "size": 1
+      },
+      "can_opener": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 4,
+        "care": 1,
+        "size": 1
+      },
+      "corkscrew": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 3,
+        "care": 1,
+        "size": 1
+      },
+      "immersion_blender": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 3,
+        "care": 1,
+        "size": 2
+      },
+      "hand_mixer_beaters": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 4,
+        "care": 1,
+        "size": 1
+      },
+      "pastry_blender": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 3,
+        "care": 1,
+        "size": 2
+      },
+      "melon_baller": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 2,
+        "complexity": 2,
+        "care": 1,
+        "size": 1
+      },
+      "zester": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 3,
+        "complexity": 4,
+        "care": 1,
+        "size": 1
+      },
+      "mandoline": {
+        "difficulty": 4,
+        "time": 4,
+        "effort": 3,
+        "complexity": 3,
+        "care": 3,
+        "size": 2
+      },
+      "colander": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 2,
+        "care": 1,
+        "size": 2
+      },
+      "fine_mesh_strainer": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 4,
+        "care": 1,
+        "size": 2
+      },
+      "sieve": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 3,
+        "care": 1,
+        "size": 2
+      },
+      "vegetable_steamer": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 3,
+        "care": 1,
+        "size": 2
+      },
+      "bamboo_skewers": {
+        "difficulty": 1,
+        "time": 1,
+        "effort": 1,
+        "complexity": 1,
+        "care": 1,
+        "size": 1
+      },
+      "meat_thermometer": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 2,
+        "care": 2,
+        "size": 1
+      },
+      "basting_brush": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 4,
+        "care": 2,
+        "size": 1
+      },
+      "pastry_brush": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 4,
+        "care": 2,
+        "size": 1
+      },
+      "rolling_pin": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 2,
+        "complexity": 1,
+        "care": 2,
+        "size": 2
+      },
+      "cookie_cutter": {
+        "difficulty": 1,
+        "time": 1,
+        "effort": 1,
+        "complexity": 2,
+        "care": 1,
+        "size": 1
+      },
+      "measuring_cups_dry": {
+        "difficulty": 1,
+        "time": 1,
+        "effort": 1,
+        "complexity": 1,
+        "care": 1,
+        "size": 1
+      },
+      "measuring_cups_wet": {
+        "difficulty": 1,
+        "time": 1,
+        "effort": 1,
+        "complexity": 1,
+        "care": 1,
+        "size": 1
+      },
+      "measuring_spoons": {
+        "difficulty": 1,
+        "time": 1,
+        "effort": 1,
+        "complexity": 1,
+        "care": 1,
+        "size": 1
+      },
+      "cutting_board_small": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 2,
+        "complexity": 1,
+        "care": 1,
+        "size": 2
+      },
+      "cutting_board_large": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 3,
+        "complexity": 1,
+        "care": 1,
+        "size": 3
+      },
+      "cutting_board_wood": {
+        "difficulty": 4,
+        "time": 4,
+        "effort": 3,
+        "complexity": 2,
+        "care": 4,
+        "size": 3
+      }
+    },
+    "cookware": {
+      "cast_iron_pan": {
+        "difficulty": 5,
+        "time": 3,
+        "effort": 3,
+        "complexity": 2,
+        "care": 5,
+        "size": 3
+      },
+      "cast_iron_dutch_oven": {
+        "difficulty": 6,
+        "time": 4,
+        "effort": 3,
+        "complexity": 3,
+        "care": 5,
+        "size": 4
+      },
+      "carbon_steel_pan": {
+        "difficulty": 5,
+        "time": 3,
+        "effort": 3,
+        "complexity": 2,
+        "care": 5,
+        "size": 2
+      },
+      "nonstick_pan_small": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 1,
+        "care": 3,
+        "size": 1
+      },
+      "nonstick_pan_large": {
+        "difficulty": 3,
+        "time": 2,
+        "effort": 1,
+        "complexity": 1,
+        "care": 3,
+        "size": 2
+      },
+      "stainless_steel_pan_small": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 1,
+        "care": 1,
+        "size": 2
+      },
+      "stainless_steel_pan_large": {
+        "difficulty": 4,
+        "time": 3,
+        "effort": 3,
+        "complexity": 1,
+        "care": 1,
+        "size": 3
+      },
+      "stainless_steel_pot_small": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 2,
+        "care": 1,
+        "size": 2
+      },
+      "stainless_steel_pot_medium": {
+        "difficulty": 5,
+        "time": 4,
+        "effort": 3,
+        "complexity": 2,
+        "care": 1,
+        "size": 3
+      },
+      "stainless_steel_pot_large": {
+        "difficulty": 7,
+        "time": 5,
+        "effort": 4,
+        "complexity": 2,
+        "care": 1,
+        "size": 5
+      },
+      "stockpot": {
+        "difficulty": 7,
+        "time": 5,
+        "effort": 4,
+        "complexity": 2,
+        "care": 1,
+        "size": 5
+      },
+      "large_pot": {
+        "difficulty": 7,
+        "time": 5,
+        "effort": 4,
+        "complexity": 2,
+        "care": 1,
+        "size": 5
+      },
+      "saucepan_small": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 2,
+        "care": 1,
+        "size": 1
+      },
+      "saucepan_medium": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 2,
+        "care": 1,
+        "size": 2
+      },
+      "saucepan_large": {
+        "difficulty": 4,
+        "time": 3,
+        "effort": 3,
+        "complexity": 2,
+        "care": 1,
+        "size": 3
+      },
+      "dutch_oven_enameled": {
+        "difficulty": 5,
+        "time": 4,
+        "effort": 3,
+        "complexity": 2,
+        "care": 3,
+        "size": 4
+      },
+      "dutch_iron": {
+        "difficulty": 6,
+        "time": 4,
+        "effort": 3,
+        "complexity": 3,
+        "care": 5,
+        "size": 4
+      },
+      "wok": {
+        "difficulty": 5,
+        "time": 4,
+        "effort": 3,
+        "complexity": 2,
+        "care": 2,
+        "size": 3
+      },
+      "wok_seasoned": {
+        "difficulty": 5,
+        "time": 4,
+        "effort": 3,
+        "complexity": 2,
+        "care": 5,
+        "size": 3
+      },
+      "roasting_pan": {
+        "difficulty": 6,
+        "time": 5,
+        "effort": 4,
+        "complexity": 2,
+        "care": 1,
+        "size": 5
+      },
+      "roasting_rack": {
+        "difficulty": 5,
+        "time": 4,
+        "effort": 3,
+        "complexity": 3,
+        "care": 1,
+        "size": 3
+      },
+      "baking_sheet": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 1,
+        "care": 1,
+        "size": 2
+      },
+      "baking_sheet_rimmed": {
+        "difficulty": 4,
+        "time": 3,
+        "effort": 3,
+        "complexity": 1,
+        "care": 1,
+        "size": 3
+      },
+      "muffin_tin": {
+        "difficulty": 4,
+        "time": 4,
+        "effort": 3,
+        "complexity": 4,
+        "care": 1,
+        "size": 2
+      },
+      "cake_pan": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 2,
+        "care": 1,
+        "size": 2
+      },
+      "bundt_pan": {
+        "difficulty": 5,
+        "time": 4,
+        "effort": 3,
+        "complexity": 5,
+        "care": 2,
+        "size": 2
+      },
+      "loaf_pan": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 2,
+        "care": 1,
+        "size": 2
+      },
+      "pie_dish": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 2,
+        "care": 2,
+        "size": 2
+      },
+      "casserole_dish": {
+        "difficulty": 4,
+        "time": 4,
+        "effort": 3,
+        "complexity": 2,
+        "care": 1,
+        "size": 3
+      },
+      "casserole_dish_glass": {
+        "difficulty": 4,
+        "time": 4,
+        "effort": 3,
+        "complexity": 2,
+        "care": 3,
+        "size": 3
+      },
+      "pyrex_baking_dish": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 1,
+        "care": 3,
+        "size": 2
+      },
+      "glass_baking_dish": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 1,
+        "care": 3,
+        "size": 2
+      },
+      "slow_cooker_insert": {
+        "difficulty": 5,
+        "time": 4,
+        "effort": 3,
+        "complexity": 2,
+        "care": 2,
+        "size": 4
+      },
+      "instant_pot_insert": {
+        "difficulty": 4,
+        "time": 3,
+        "effort": 3,
+        "complexity": 2,
+        "care": 2,
+        "size": 3
+      },
+      "deep_fryer": {
+        "difficulty": 7,
+        "time": 5,
+        "effort": 5,
+        "complexity": 3,
+        "care": 3,
+        "size": 4
+      },
+      "grill_pan": {
+        "difficulty": 5,
+        "time": 4,
+        "effort": 4,
+        "complexity": 3,
+        "care": 1,
+        "size": 3
+      },
+      "crepe_pan": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 1,
+        "care": 2,
+        "size": 2
+      },
+      "double_boiler": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 3,
+        "care": 2,
+        "size": 2
+      },
+      "steamer_insert": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 3,
+        "care": 1,
+        "size": 2
+      },
+      "pressure_cooker": {
+        "difficulty": 5,
+        "time": 4,
+        "effort": 3,
+        "complexity": 3,
+        "care": 3,
+        "size": 3
+      },
+      "tagine": {
+        "difficulty": 5,
+        "time": 4,
+        "effort": 3,
+        "complexity": 3,
+        "care": 4,
+        "size": 3
+      },
+      "paella_pan": {
+        "difficulty": 4,
+        "time": 3,
+        "effort": 3,
+        "complexity": 2,
+        "care": 2,
+        "size": 3
+      },
+      "frying_pan_small": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 1,
+        "care": 1,
+        "size": 2
+      },
+      "frying_pan_large": {
+        "difficulty": 4,
+        "time": 3,
+        "effort": 3,
+        "complexity": 1,
+        "care": 1,
+        "size": 3
+      },
+      "saute_pan": {
+        "difficulty": 4,
+        "time": 3,
+        "effort": 3,
+        "complexity": 1,
+        "care": 1,
+        "size": 3
+      },
+      "griddle": {
+        "difficulty": 4,
+        "time": 3,
+        "effort": 3,
+        "complexity": 1,
+        "care": 1,
+        "size": 3
+      },
+      "popover_pan": {
+        "difficulty": 4,
+        "time": 4,
+        "effort": 3,
+        "complexity": 4,
+        "care": 1,
+        "size": 2
+      },
+      "springform_pan": {
+        "difficulty": 4,
+        "time": 4,
+        "effort": 3,
+        "complexity": 4,
+        "care": 2,
+        "size": 2
+      },
+      "souffle_dish": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 2,
+        "care": 3,
+        "size": 2
+      },
+      "ramekin": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 1,
+        "care": 2,
+        "size": 1
+      }
+    },
+    "dishware": {
+      "small_plate": {
+        "difficulty": 2,
+        "time": 1,
+        "effort": 1,
+        "complexity": 1,
+        "care": 1,
+        "size": 1
+      },
+      "dinner_plate": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 1,
+        "care": 1,
+        "size": 2
+      },
+      "large_plate": {
+        "difficulty": 3,
+        "time": 2,
+        "effort": 1,
+        "complexity": 1,
+        "care": 1,
+        "size": 3
+      },
+      "salad_plate": {
+        "difficulty": 2,
+        "time": 1,
+        "effort": 1,
+        "complexity": 1,
+        "care": 1,
+        "size": 1
+      },
+      "bowl_small": {
+        "difficulty": 2,
+        "time": 1,
+        "effort": 1,
+        "complexity": 2,
+        "care": 1,
+        "size": 1
+      },
+      "bowl_medium": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 2,
+        "care": 1,
+        "size": 2
+      },
+      "bowl_large": {
+        "difficulty": 3,
+        "time": 2,
+        "effort": 1,
+        "complexity": 2,
+        "care": 1,
+        "size": 3
+      },
+      "soup_bowl": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 2,
+        "care": 1,
+        "size": 2
+      },
+      "cereal_bowl": {
+        "difficulty": 2,
+        "time": 1,
+        "effort": 1,
+        "complexity": 2,
+        "care": 1,
+        "size": 1
+      },
+      "pasta_bowl": {
+        "difficulty": 3,
+        "time": 2,
+        "effort": 1,
+        "complexity": 2,
+        "care": 1,
+        "size": 3
+      },
+      "mug": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 2,
+        "care": 1,
+        "size": 1
+      },
+      "teacup": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 2,
+        "care": 2,
+        "size": 1
+      },
+      "coffee_cup": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 2,
+        "care": 1,
+        "size": 1
+      },
+      "espresso_cup": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 2,
+        "care": 2,
+        "size": 1
+      },
+      "water_glass": {
+        "difficulty": 1,
+        "time": 1,
+        "effort": 1,
+        "complexity": 2,
+        "care": 2,
+        "size": 1
+      },
+      "wine_glass": {
+        "difficulty": 3,
+        "time": 2,
+        "effort": 1,
+        "complexity": 2,
+        "care": 4,
+        "size": 1
+      },
+      "wine_glass_stemless": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 2,
+        "care": 3,
+        "size": 1
+      },
+      "champagne_flute": {
+        "difficulty": 3,
+        "time": 2,
+        "effort": 1,
+        "complexity": 3,
+        "care": 4,
+        "size": 1
+      },
+      "cocktail_glass": {
+        "difficulty": 3,
+        "time": 2,
+        "effort": 1,
+        "complexity": 2,
+        "care": 4,
+        "size": 1
+      },
+      "highball_glass": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 2,
+        "care": 2,
+        "size": 1
+      },
+      "tumbler": {
+        "difficulty": 2,
+        "time": 1,
+        "effort": 1,
+        "complexity": 1,
+        "care": 1,
+        "size": 1
+      },
+      "pint_glass": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 2,
+        "care": 1,
+        "size": 1
+      },
+      "mason_jar": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 2,
+        "care": 1,
+        "size": 1
+      },
+      "beer_glass": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 2,
+        "care": 2,
+        "size": 1
+      },
+      "shot_glass": {
+        "difficulty": 1,
+        "time": 1,
+        "effort": 1,
+        "complexity": 1,
+        "care": 1,
+        "size": 1
+      },
+      "pitcher_small": {
+        "difficulty": 3,
+        "time": 2,
+        "effort": 1,
+        "complexity": 2,
+        "care": 2,
+        "size": 2
+      },
+      "pitcher_large": {
+        "difficulty": 4,
+        "time": 3,
+        "effort": 2,
+        "complexity": 2,
+        "care": 2,
+        "size": 3
+      },
+      "carafe": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 3,
+        "care": 3,
+        "size": 2
+      },
+      "decanter": {
+        "difficulty": 4,
+        "time": 4,
+        "effort": 2,
+        "complexity": 4,
+        "care": 3,
+        "size": 2
+      },
+      "serving_bowl": {
+        "difficulty": 3,
+        "time": 2,
+        "effort": 1,
+        "complexity": 2,
+        "care": 1,
+        "size": 3
+      },
+      "serving_platter_small": {
+        "difficulty": 3,
+        "time": 2,
+        "effort": 1,
+        "complexity": 1,
+        "care": 2,
+        "size": 2
+      },
+      "serving_platter_large": {
+        "difficulty": 4,
+        "time": 3,
+        "effort": 2,
+        "complexity": 1,
+        "care": 2,
+        "size": 4
+      },
+      "gravy_boat": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 2,
+        "care": 1,
+        "size": 1
+      },
+      "butter_dish": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 2,
+        "care": 1,
+        "size": 1
+      },
+      "condiment_dish": {
+        "difficulty": 1,
+        "time": 1,
+        "effort": 1,
+        "complexity": 1,
+        "care": 1,
+        "size": 1
+      },
+      "sugar_bowl": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 2,
+        "care": 1,
+        "size": 1
+      },
+      "cream_pitcher": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 2,
+        "care": 1,
+        "size": 1
+      },
+      "salt_shaker": {
+        "difficulty": 1,
+        "time": 1,
+        "effort": 1,
+        "complexity": 2,
+        "care": 1,
+        "size": 1
+      },
+      "pepper_shaker": {
+        "difficulty": 1,
+        "time": 1,
+        "effort": 1,
+        "complexity": 2,
+        "care": 1,
+        "size": 1
+      },
+      "bread_plate": {
+        "difficulty": 2,
+        "time": 1,
+        "effort": 1,
+        "complexity": 1,
+        "care": 1,
+        "size": 1
+      },
+      "dessert_plate": {
+        "difficulty": 2,
+        "time": 1,
+        "effort": 1,
+        "complexity": 1,
+        "care": 1,
+        "size": 1
+      },
+      "appetizer_plate": {
+        "difficulty": 2,
+        "time": 1,
+        "effort": 1,
+        "complexity": 1,
+        "care": 1,
+        "size": 1
+      }
+    },
+    "delicate_and_specialty": {
+      "crystal_glass": {
+        "difficulty": 4,
+        "time": 3,
+        "effort": 2,
+        "complexity": 2,
+        "care": 5,
+        "size": 1
+      },
+      "crystal_wine_glass": {
+        "difficulty": 5,
+        "time": 3,
+        "effort": 2,
+        "complexity": 2,
+        "care": 5,
+        "size": 1
+      },
+      "crystal_champagne_flute": {
+        "difficulty": 5,
+        "time": 3,
+        "effort": 2,
+        "complexity": 3,
+        "care": 5,
+        "size": 1
+      },
+      "fine_china_plate": {
+        "difficulty": 4,
+        "time": 3,
+        "effort": 2,
+        "complexity": 1,
+        "care": 5,
+        "size": 2
+      },
+      "fine_china_bowl": {
+        "difficulty": 4,
+        "time": 3,
+        "effort": 2,
+        "complexity": 2,
+        "care": 5,
+        "size": 2
+      },
+      "fine_china_cup": {
+        "difficulty": 4,
+        "time": 3,
+        "effort": 2,
+        "complexity": 2,
+        "care": 5,
+        "size": 1
+      },
+      "fine_china_serving_platter": {
+        "difficulty": 5,
+        "time": 3,
+        "effort": 2,
+        "complexity": 1,
+        "care": 5,
+        "size": 3
+      },
+      "copper_pan": {
+        "difficulty": 4,
+        "time": 4,
+        "effort": 3,
+        "complexity": 1,
+        "care": 4,
+        "size": 2
+      },
+      "copper_pot": {
+        "difficulty": 5,
+        "time": 4,
+        "effort": 3,
+        "complexity": 2,
+        "care": 4,
+        "size": 3
+      },
+      "copper_mauviel": {
+        "difficulty": 5,
+        "time": 5,
+        "effort": 4,
+        "complexity": 2,
+        "care": 4,
+        "size": 3
+      },
+      "clay_pot": {
+        "difficulty": 5,
+        "time": 4,
+        "effort": 3,
+        "complexity": 3,
+        "care": 5,
+        "size": 3
+      },
+      "earthenware": {
+        "difficulty": 4,
+        "time": 3,
+        "effort": 2,
+        "complexity": 2,
+        "care": 4,
+        "size": 2
+      },
+      "stoneware_bowl": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 2,
+        "care": 2,
+        "size": 2
+      },
+      "stoneware_baker": {
+        "difficulty": 4,
+        "time": 4,
+        "effort": 3,
+        "complexity": 2,
+        "care": 2,
+        "size": 3
+      },
+      "ceramic_tagine": {
+        "difficulty": 5,
+        "time": 4,
+        "effort": 3,
+        "complexity": 3,
+        "care": 5,
+        "size": 3
+      },
+      "porcelain_ramekin": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 1,
+        "care": 3,
+        "size": 1
+      },
+      "terra_cotta": {
+        "difficulty": 5,
+        "time": 4,
+        "effort": 3,
+        "complexity": 3,
+        "care": 5,
+        "size": 3
+      },
+      "mosaic_mortar_pestle": {
+        "difficulty": 4,
+        "time": 4,
+        "effort": 3,
+        "complexity": 4,
+        "care": 3,
+        "size": 2
+      },
+      "marble_pastry_board": {
+        "difficulty": 4,
+        "time": 3,
+        "effort": 2,
+        "complexity": 1,
+        "care": 4,
+        "size": 3
+      },
+      "marble_cheese_board": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 2,
+        "care": 3,
+        "size": 2
+      },
+      "wooden_serving_bowl": {
+        "difficulty": 4,
+        "time": 3,
+        "effort": 2,
+        "complexity": 2,
+        "care": 4,
+        "size": 3
+      },
+      "wooden_spoon": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 1,
+        "care": 3,
+        "size": 1
+      },
+      "wooden_chopsticks": {
+        "difficulty": 1,
+        "time": 1,
+        "effort": 1,
+        "complexity": 1,
+        "care": 2,
+        "size": 1
+      },
+      "bamboo_steamer": {
+        "difficulty": 4,
+        "time": 4,
+        "effort": 3,
+        "complexity": 4,
+        "care": 4,
+        "size": 3
+      },
+      "bamboo_cutting_board": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 1,
+        "care": 3,
+        "size": 3
+      },
+      "cast_iron_tekka": {
+        "difficulty": 6,
+        "time": 4,
+        "effort": 4,
+        "complexity": 3,
+        "care": 5,
+        "size": 3
+      },
+      "cast_iron_wok": {
+        "difficulty": 6,
+        "time": 5,
+        "effort": 4,
+        "complexity": 3,
+        "care": 5,
+        "size": 4
+      },
+      "soapstone_cookware": {
+        "difficulty": 4,
+        "time": 4,
+        "effort": 3,
+        "complexity": 2,
+        "care": 4,
+        "size": 3
+      },
+      "cazuela": {
+        "difficulty": 4,
+        "time": 3,
+        "effort": 2,
+        "complexity": 2,
+        "care": 4,
+        "size": 2
+      },
+      "comal": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 1,
+        "care": 3,
+        "size": 2
+      },
+      "tandoor": {
+        "difficulty": 8,
+        "time": 6,
+        "effort": 5,
+        "complexity": 4,
+        "care": 5,
+        "size": 5
+      },
+      "donabe": {
+        "difficulty": 5,
+        "time": 4,
+        "effort": 3,
+        "complexity": 3,
+        "care": 5,
+        "size": 3
+      },
+      "paellera": {
+        "difficulty": 4,
+        "time": 3,
+        "effort": 3,
+        "complexity": 2,
+        "care": 3,
+        "size": 3
+      }
+    },
+    "large_and_bulky": {
+      "roasting_pan_large": {
+        "difficulty": 7,
+        "time": 5,
+        "effort": 4,
+        "complexity": 2,
+        "care": 1,
+        "size": 6
+      },
+      "turkey_roaster": {
+        "difficulty": 8,
+        "time": 6,
+        "effort": 5,
+        "complexity": 2,
+        "care": 2,
+        "size": 7
+      },
+      "lobster_pot": {
+        "difficulty": 8,
+        "time": 6,
+        "effort": 4,
+        "complexity": 2,
+        "care": 1,
+        "size": 7
+      },
+      "canning_pot": {
+        "difficulty": 8,
+        "time": 6,
+        "effort": 4,
+        "complexity": 2,
+        "care": 1,
+        "size": 7
+      },
+      "brew_kettle": {
+        "difficulty": 7,
+        "time": 5,
+        "effort": 4,
+        "complexity": 3,
+        "care": 1,
+        "size": 6
+      },
+      "smoker_box": {
+        "difficulty": 7,
+        "time": 6,
+        "effort": 5,
+        "complexity": 3,
+        "care": 2,
+        "size": 5
+      },
+      "bbq_grate": {
+        "difficulty": 8,
+        "time": 6,
+        "effort": 6,
+        "complexity": 3,
+        "care": 2,
+        "size": 6
+      },
+      "grill_basket": {
+        "difficulty": 5,
+        "time": 4,
+        "effort": 3,
+        "complexity": 3,
+        "care": 2,
+        "size": 3
+      },
+      "outdoor_fryer": {
+        "difficulty": 9,
+        "time": 7,
+        "effort": 6,
+        "complexity": 3,
+        "care": 3,
+        "size": 8
+      },
+      "commercial_stockpot": {
+        "difficulty": 9,
+        "time": 7,
+        "effort": 5,
+        "complexity": 2,
+        "care": 1,
+        "size": 8
+      },
+      "sheet_pan_full": {
+        "difficulty": 4,
+        "time": 3,
+        "effort": 3,
+        "complexity": 1,
+        "care": 1,
+        "size": 3
+      },
+      "sheet_pan_half": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 1,
+        "care": 1,
+        "size": 2
+      },
+      "sheet_pan_quarter": {
+        "difficulty": 3,
+        "time": 2,
+        "effort": 2,
+        "complexity": 1,
+        "care": 1,
+        "size": 2
+      },
+      "hotel_pan": {
+        "difficulty": 6,
+        "time": 4,
+        "effort": 3,
+        "complexity": 2,
+        "care": 1,
+        "size": 4
+      },
+      "chafing_dish": {
+        "difficulty": 5,
+        "time": 4,
+        "effort": 3,
+        "complexity": 3,
+        "care": 2,
+        "size": 4
+      },
+      "food_warmer_insert": {
+        "difficulty": 5,
+        "time": 4,
+        "effort": 3,
+        "complexity": 2,
+        "care": 2,
+        "size": 4
+      },
+      "crawfish_boiler": {
+        "difficulty": 9,
+        "time": 7,
+        "effort": 5,
+        "complexity": 2,
+        "care": 1,
+        "size": 8
+      },
+      "wok_burner": {
+        "difficulty": 7,
+        "time": 5,
+        "effort": 4,
+        "complexity": 3,
+        "care": 2,
+        "size": 6
+      }
+    },
+    "notoriously_difficult": {
+      "burnt_pot": {
+        "difficulty": 8,
+        "time": 7,
+        "effort": 7,
+        "complexity": 2,
+        "care": 2,
+        "size": 3
+      },
+      "burnt_pan": {
+        "difficulty": 7,
+        "time": 6,
+        "effort": 7,
+        "complexity": 1,
+        "care": 2,
+        "size": 2
+      },
+      "burnt_baking_sheet": {
+        "difficulty": 6,
+        "time": 5,
+        "effort": 6,
+        "complexity": 1,
+        "care": 1,
+        "size": 3
+      },
+      "caramelized_saucepan": {
+        "difficulty": 6,
+        "time": 5,
+        "effort": 5,
+        "complexity": 2,
+        "care": 1,
+        "size": 2
+      },
+      "risotto_pan": {
+        "difficulty": 5,
+        "time": 4,
+        "effort": 4,
+        "complexity": 2,
+        "care": 1,
+        "size": 2
+      },
+      "cheese_fondue_pot": {
+        "difficulty": 7,
+        "time": 5,
+        "effort": 6,
+        "complexity": 2,
+        "care": 2,
+        "size": 3
+      },
+      "chocolate_fondue_pot": {
+        "difficulty": 5,
+        "time": 4,
+        "effort": 4,
+        "complexity": 2,
+        "care": 2,
+        "size": 2
+      },
+      "deep_fried_wok": {
+        "difficulty": 6,
+        "time": 5,
+        "effort": 4,
+        "complexity": 2,
+        "care": 2,
+        "size": 3
+      },
+      "grill_press": {
+        "difficulty": 5,
+        "time": 4,
+        "effort": 4,
+        "complexity": 2,
+        "care": 1,
+        "size": 2
+      },
+      "pizza_stone": {
+        "difficulty": 6,
+        "time": 5,
+        "effort": 3,
+        "complexity": 1,
+        "care": 5,
+        "size": 3
+      },
+      "pizza_steel": {
+        "difficulty": 5,
+        "time": 4,
+        "effort": 3,
+        "complexity": 1,
+        "care": 2,
+        "size": 3
+      },
+      "espresso_machine_portafilter": {
+        "difficulty": 4,
+        "time": 3,
+        "effort": 3,
+        "complexity": 4,
+        "care": 2,
+        "size": 1
+      },
+      "espresso_machine_steam_wand": {
+        "difficulty": 5,
+        "time": 4,
+        "effort": 3,
+        "complexity": 4,
+        "care": 2,
+        "size": 1
+      },
+      "coffee_maker_carafe": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 3,
+        "care": 2,
+        "size": 2
+      },
+      "french_press": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 3,
+        "care": 2,
+        "size": 1
+      },
+      "pour_over_cone": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 3,
+        "care": 1,
+        "size": 1
+      },
+      "moka_pot": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 4,
+        "care": 2,
+        "size": 1
+      },
+      "cezve_ibrik": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 3,
+        "care": 2,
+        "size": 1
+      },
+      "cold_brew_filter": {
+        "difficulty": 4,
+        "time": 4,
+        "effort": 2,
+        "complexity": 4,
+        "care": 2,
+        "size": 2
+      },
+      "milk_frother": {
+        "difficulty": 3,
+        "time": 2,
+        "effort": 2,
+        "complexity": 3,
+        "care": 1,
+        "size": 1
+      },
+      "blender_jar": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 3,
+        "care": 1,
+        "size": 2
+      },
+      "food_processor_bowl": {
+        "difficulty": 4,
+        "time": 4,
+        "effort": 3,
+        "complexity": 4,
+        "care": 1,
+        "size": 2
+      },
+      "food_processor_blade": {
+        "difficulty": 4,
+        "time": 3,
+        "effort": 3,
+        "complexity": 3,
+        "care": 3,
+        "size": 1
+      },
+      "stand_mixer_bowl": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 2,
+        "care": 1,
+        "size": 2
+      },
+      "stand_mixer_attachment_dough_hook": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 3,
+        "care": 1,
+        "size": 1
+      },
+      "stand_mixer_attachment_flat_beater": {
+        "difficulty": 3,
+        "time": 3,
+        "effort": 2,
+        "complexity": 2,
+        "care": 1,
+        "size": 1
+      },
+      "stand_mixer_attachment_whisk": {
+        "difficulty": 4,
+        "time": 3,
+        "effort": 2,
+        "complexity": 4,
+        "care": 1,
+        "size": 1
+      },
+      "pasta_maker": {
+        "difficulty": 6,
+        "time": 5,
+        "effort": 4,
+        "complexity": 5,
+        "care": 2,
+        "size": 2
+      },
+      "pasta_dryer": {
+        "difficulty": 2,
+        "time": 2,
+        "effort": 1,
+        "complexity": 2,
+        "care": 2,
+        "size": 2
+      },
+      "meat_grinder": {
+        "difficulty": 7,
+        "time": 6,
+        "effort": 5,
+        "complexity": 6,
+        "care": 2,
+        "size": 3
+      },
+      "sausage_stuffer": {
+        "difficulty": 7,
+        "time": 6,
+        "effort": 5,
+        "complexity": 5,
+        "care": 2,
+        "size": 3
+      },
+      "ice_cream_maker_bowl": {
+        "difficulty": 4,
+        "time": 4,
+        "effort": 2,
+        "complexity": 2,
+        "care": 3,
+        "size": 3
+      }
+    }
+  }
+}
