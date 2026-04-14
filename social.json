@@ -4,12 +4,30 @@
       "description": "Number of users who follow the recipe author for updates on new recipes",
       "display": "integer",
       "tiers": {
-        "newcomer": {"min": 0, "max": 49},
-        "growing": {"min": 50, "max": 499},
-        "established": {"min": 500, "max": 4999},
-        "popular": {"min": 5000, "max": 49999},
-        "star_chef": {"min": 50000, "max": 249999},
-        "celebrity": {"min": 250000, "max": null}
+        "newcomer": {
+          "min": 0,
+          "max": 49
+        },
+        "growing": {
+          "min": 50,
+          "max": 499
+        },
+        "established": {
+          "min": 500,
+          "max": 4999
+        },
+        "popular": {
+          "min": 5000,
+          "max": 49999
+        },
+        "star_chef": {
+          "min": 50000,
+          "max": 249999
+        },
+        "celebrity": {
+          "min": 250000,
+          "max": null
+        }
       },
       "tier_labels": {
         "newcomer": "Newcomer",
@@ -34,12 +52,30 @@
         }
       },
       "tiers": {
-        "unforked": {"min": 0, "max": 0},
-        "sporadic": {"min": 1, "max": 9},
-        "inspiring": {"min": 10, "max": 49},
-        "trendy": {"min": 50, "max": 249},
-        "viral": {"min": 250, "max": 999},
-        "progenitor": {"min": 1000, "max": null}
+        "unforked": {
+          "min": 0,
+          "max": 0
+        },
+        "sporadic": {
+          "min": 1,
+          "max": 9
+        },
+        "inspiring": {
+          "min": 10,
+          "max": 49
+        },
+        "trendy": {
+          "min": 50,
+          "max": 249
+        },
+        "viral": {
+          "min": 250,
+          "max": 999
+        },
+        "progenitor": {
+          "min": 1000,
+          "max": null
+        }
       },
       "tier_labels": {
         "unforked": "Unforked",
@@ -54,12 +90,30 @@
       "description": "Number of users who starred or bookmarked the recipe for future reference",
       "display": "integer",
       "tiers": {
-        "unnoticed": {"min": 0, "max": 9},
-        "noted": {"min": 10, "max": 99},
-        "liked": {"min": 100, "max": 499},
-        "loved": {"min": 500, "max": 2499},
-        "iconic": {"min": 2500, "max": 9999},
-        "legendary": {"min": 10000, "max": null}
+        "unnoticed": {
+          "min": 0,
+          "max": 9
+        },
+        "noted": {
+          "min": 10,
+          "max": 99
+        },
+        "liked": {
+          "min": 100,
+          "max": 499
+        },
+        "loved": {
+          "min": 500,
+          "max": 2499
+        },
+        "iconic": {
+          "min": 2500,
+          "max": 9999
+        },
+        "legendary": {
+          "min": 10000,
+          "max": null
+        }
       },
       "tier_labels": {
         "unnoticed": "Unnoticed",
@@ -79,18 +133,52 @@
         "confidence": "Rating reliability based on sample size"
       },
       "confidence_thresholds": {
-        "low_confidence": {"min_ratings": 0, "max_ratings": 4, "confidence": "low"},
-        "moderate_confidence": {"min_ratings": 5, "max_ratings": 19, "confidence": "moderate"},
-        "high_confidence": {"min_ratings": 20, "max_ratings": 99, "confidence": "high"},
-        "very_high_confidence": {"min_ratings": 100, "max_ratings": null, "confidence": "very_high"}
+        "low_confidence": {
+          "min_ratings": 0,
+          "max_ratings": 4,
+          "confidence": "low"
+        },
+        "moderate_confidence": {
+          "min_ratings": 5,
+          "max_ratings": 19,
+          "confidence": "moderate"
+        },
+        "high_confidence": {
+          "min_ratings": 20,
+          "max_ratings": 99,
+          "confidence": "high"
+        },
+        "very_high_confidence": {
+          "min_ratings": 100,
+          "max_ratings": null,
+          "confidence": "very_high"
+        }
       },
       "rating_tiers": {
-        "poor": {"min_rate": 0, "max_rate": 49},
-        "mixed": {"min_rate": 50, "max_rate": 64},
-        "decent": {"min_rate": 65, "max_rate": 79},
-        "good": {"min_rate": 80, "max_rate": 89},
-        "great": {"min_rate": 90, "max_rate": 95},
-        "outstanding": {"min_rate": 96, "max_rate": 100}
+        "poor": {
+          "min_rate": 0,
+          "max_rate": 49
+        },
+        "mixed": {
+          "min_rate": 50,
+          "max_rate": 64
+        },
+        "decent": {
+          "min_rate": 65,
+          "max_rate": 79
+        },
+        "good": {
+          "min_rate": 80,
+          "max_rate": 89
+        },
+        "great": {
+          "min_rate": 90,
+          "max_rate": 95
+        },
+        "outstanding": {
+          "min_rate": 96,
+          "max_rate": 100
+        }
       }
     }
   },
@@ -98,12 +186,18 @@
     "popularity": {
       "description": "Composite score combining stars, thumbs_up rate, and total ratings",
       "formula": "normalize(stars) * 0.40 + positive_rate_weighted * 0.35 + normalize(total_ratings) * 0.25",
-      "scale": {"min": 0, "max": 100}
+      "scale": {
+        "min": 0,
+        "max": 100
+      }
     },
     "influence": {
       "description": "Composite score combining forks and followers reflecting recipe's impact on the community",
       "formula": "normalize(fork_count) * 0.50 + normalize(follower_count_of_author) * 0.25 + normalize(fork_descendants) * 0.25",
-      "scale": {"min": 0, "max": 100}
+      "scale": {
+        "min": 0,
+        "max": 100
+      }
     }
   }
 }

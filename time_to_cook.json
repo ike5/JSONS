@@ -6,7 +6,7 @@
   "dimension_definitions": {
     "prep_time": "Time spent preparing ingredients before cooking begins (minutes)",
     "cook_time": "Time spent actively cooking with heat or other transformation (minutes)",
-    "passive_time": "Time where no action is needed but recipe is in progress (marinating, resting, chilling, proofing",
+    "passive_time": "Time where no action is needed but recipe is in progress (marinating, resting, chilling, proofing)",
     "post_cook_time": "Time for resting, cooling, plating, or finishing after cooking is done (minutes)"
   },
   "scoring": {

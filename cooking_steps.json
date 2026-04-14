@@ -5,10 +5,10 @@
   },
   "dimension_definitions": {
     "count": "Number of discrete steps in the recipe",
-    "sequential_dependency": "How much each step depends on the previous (vs parallelizable",
+    "sequential_dependency": "How much each step depends on the previous (vs parallelizable)",
     "active_attention": "How much hands-on focus each step requires vs passive/waiting",
     "complexity_per_step": "How many sub-actions each step contains",
-    "critical_timing": "How time-sensitive the steps are (exact moments matter"
+    "critical_timing": "How time-sensitive the steps are (exact moments matter)"
   },
   "scoring": {
     "weights": {
