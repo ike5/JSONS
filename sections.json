@@ -1,0 +1,73 @@
+{
+  "scale": {
+    "min": 1,
+    "max": 10
+  },
+  "dimension_definitions": {
+    "section_count": "Number of distinct sections or sub-recipes in the dish",
+    "coordination_complexity": "Difficulty of timing and synchronizing sections so they come together correctly",
+    "parallelizability": "Whether sections can be made independently in parallel or must be sequential",
+    "interdependence": "How much one section's result affects another (e.g. filling must fit crust",
+    "assembly_complexity": "Difficulty of combining sections into the final dish"
+  },
+  "scoring": {
+    "weights": {
+      "section_count": 0.15,
+      "coordination_complexity": 0.25,
+      "parallelizability": 0.20,
+      "interdependence": 0.20,
+      "assembly_complexity": 0.20
+    },
+    "method": "weighted_sum_scaled_to_10"
+  },
+  "anchors": {
+    "scrambled_eggs": 1,
+    "pancakes_with_syrup": 2,
+    "burger_patty_bun_toppings": 3,
+    "cake_with_frosting": 5,
+    "lasagna_pasta_sauce_bechemel_layers": 7,
+    "croquembouche": 10
+  },
+  "item_scoring": {
+    "section_count": {
+      "1_single_section": 1,
+      "2": 3,
+      "3": 5,
+      "4": 7,
+      "5": 8,
+      "6_plus": 10
+    },
+    "coordination_complexity": {
+      "no_coordination_needed": 1,
+      "minimal_simple_timing": 2,
+      "moderate_stagger_starts_needed": 4,
+      "significant_critical_timing_windows": 6,
+      "complex_multiple_critical_synchronization_points": 8,
+      "extreme_orchestration_required": 10
+    },
+    "parallelizability": {
+      "all_fully_parallel_independent": 1,
+      "mostly_parallel_minor_overlap": 2,
+      "somewhat_parallel_shared_equipment": 4,
+      "mostly_sequential_small_parallel_windows": 6,
+      "largely_sequential_tight_flow": 8,
+      "completely_sequential_cannot_overlap": 10
+    },
+    "interdependence": {
+      "no_interdependence": 1,
+      "minor_flavor_pairing_only": 2,
+      "moderate_texture_or_flavor_match": 4,
+      "significant_size_or_consistency_must_align": 6,
+      "strong_one_section_fails_whole_dish_fails": 8,
+      "total_each_section_builds_on_prior": 10
+    },
+    "assembly_complexity": {
+      "no_assembly_serve_directly": 1,
+      "simple_layer_or_combine": 2,
+      "moderate_assembly_order_matters": 4,
+      "complex_layering_or_structural": 6,
+      "very_complex_precise_construction": 8,
+      "artistic_structural_engineering": 10
+    }
+  }
+}

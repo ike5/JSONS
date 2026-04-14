@@ -1,0 +1,72 @@
+{
+  "scale": {
+    "min": 1,
+    "max": 10
+  },
+  "dimension_definitions": {
+    "instruction_precision": "How clearly and completely the recipe is written (ambiguity = high score = hard to reproduce",
+    "ingredient_specificity": "How precisely ingredients are specified (brand, variety, ripeness, etc.",
+    "environmental_sensitivity": "How much altitude, humidity, oven variance, etc. affect the result",
+    "technique_dependence": "How much the result depends on the cook's technique vs following instructions",
+    "measurement_tolerance": "How precise measurements need to be for success"
+  },
+  "scoring": {
+    "weights": {
+      "instruction_precision": 0.25,
+      "ingredient_specificity": 0.20,
+      "environmental_sensitivity": 0.20,
+      "technique_dependence": 0.20,
+      "measurement_tolerance": 0.15
+    },
+    "method": "weighted_sum_scaled_to_10"
+  },
+  "anchors": {
+    "boil_water": 1,
+    "boxed_mac_and_cheese": 2,
+    "chocolate_chip_cookies": 3,
+    "sourdough_bread": 7,
+    "tempered_chocolate": 10
+  },
+  "item_scoring": {
+    "instruction_precision": {
+      "crystal_clear_no_ambiguity": 1,
+      "very_clear_minor_interpretation": 2,
+      "mostly_clear_some_guessing": 4,
+      "ambiguous_in_places": 6,
+      "significant_gaps_requires_assumption": 8,
+      "vague_or_incomplete_instructions": 10
+    },
+    "ingredient_specificity": {
+      "exact_brands_and_varieties": 1,
+      "specific_types_clear_substitutions": 2,
+      "generic_types_any_works": 3,
+      "some_ambiguity_quality_matters": 5,
+      "significant_variation_by_source": 7,
+      "wildly_varies_by_origin_or_season": 10
+    },
+    "environmental_sensitivity": {
+      "works_anywhere_no_effect": 1,
+      "minor_effects_easily_adjusted": 2,
+      "moderate_effects_most_kitchens_ok": 4,
+      "noticeable_effects_some_adjustments": 6,
+      "significant_effects_needs_adaptation": 8,
+      "extremely_sensitive_altitude_humidity": 10
+    },
+    "technique_dependence": {
+      "technique_irrelevant_follow_steps": 1,
+      "minimal_technique_helps": 2,
+      "moderate_technique_improves_results": 4,
+      "significant_technique_needed": 6,
+      "heavy_technique_required": 8,
+      "entirely_technique_driven": 10
+    },
+    "measurement_tolerance": {
+      "very_forgiving_approximate_works": 1,
+      "forgiving_small_errors_ok": 2,
+      "moderately_tolerant": 4,
+      "fairly_precise_needed": 6,
+      "precise_measurements_required": 8,
+      "gram_precision_or_weight_required": 10
+    }
+  }
+}

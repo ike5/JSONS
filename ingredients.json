@@ -1,0 +1,72 @@
+{
+  "scale": {
+    "min": 1,
+    "max": 10
+  },
+  "dimension_definitions": {
+    "count": "Number of distinct ingredients required",
+    "sourcing": "Difficulty of finding ingredients (common pantry vs specialty shop)",
+    "prep_complexity": "Amount of prep work ingredients need before use (washing, chopping, measuring",
+    "caloric_density": "How calorie-dense the ingredient mix is per unit weight",
+    "macro_balance": "How balanced the macronutrient profile is across the ingredient list"
+  },
+  "scoring": {
+    "weights": {
+      "count": 0.30,
+      "sourcing": 0.25,
+      "prep_complexity": 0.20,
+      "caloric_density": 0.15,
+      "macro_balance": 0.10
+    },
+    "method": "weighted_sum_scaled_to_10"
+  },
+  "anchors": {
+    "toast_with_butter": 1,
+    "spaghetti_aglio_e_olio": 3,
+    "pad_thai": 5,
+    "pho_from_scratch": 8,
+    "beef_wellington": 10
+  },
+  "item_scoring": {
+    "count": {
+      "1_to_3": 1,
+      "4_to_6": 2,
+      "7_to_10": 4,
+      "11_to_15": 6,
+      "16_to_20": 8,
+      "21_plus": 10
+    },
+    "sourcing": {
+      "all_pantry_staples": 1,
+      "mostly_pantry_one_trip": 2,
+      "one_specialty_item": 4,
+      "multiple_specialty_items": 6,
+      "seasonal_or_regional_required": 8,
+      "hard_to_find_or_imported": 10
+    },
+    "prep_complexity": {
+      "all_ready_to_use": 1,
+      "minimal_wash_and_measure": 2,
+      "some_chopping": 3,
+      "significant_prep_multiple_techniques": 5,
+      "extensive_prep_marination_deboning": 7,
+      "professional_level_prep": 10
+    },
+    "caloric_density": {
+      "very_low_under_50cal_per_100g": 1,
+      "low_50_to_100": 2,
+      "moderate_100_to_200": 4,
+      "moderate_high_200_to_350": 6,
+      "high_350_to_500": 8,
+      "very_high_over_500": 10
+    },
+    "macro_balance": {
+      "well_balanced_all_three": 1,
+      "slightly_carb_heavy": 3,
+      "slightly_fat_heavy": 3,
+      "moderately_unbalanced": 5,
+      "largely_single_macro": 7,
+      "near_single_macro": 10
+    }
+  }
+}

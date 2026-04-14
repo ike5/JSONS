@@ -1,0 +1,72 @@
+{
+  "scale": {
+    "min": 1,
+    "max": 10
+  },
+  "dimension_definitions": {
+    "count": "Number of discrete steps in the recipe",
+    "sequential_dependency": "How much each step depends on the previous (vs parallelizable",
+    "active_attention": "How much hands-on focus each step requires vs passive/waiting",
+    "complexity_per_step": "How many sub-actions each step contains",
+    "critical_timing": "How time-sensitive the steps are (exact moments matter"
+  },
+  "scoring": {
+    "weights": {
+      "count": 0.25,
+      "sequential_dependency": 0.20,
+      "active_attention": 0.20,
+      "complexity_per_step": 0.20,
+      "critical_timing": 0.15
+    },
+    "method": "weighted_sum_scaled_to_10"
+  },
+  "anchors": {
+    "make_tea": 1,
+    "scrambled_eggs": 2,
+    "pasta_from_scratch_sauce": 4,
+    "croissant": 8,
+    "beef_wellington": 10
+  },
+  "item_scoring": {
+    "count": {
+      "1_to_2_steps": 1,
+      "3_to_5": 2,
+      "6_to_8": 4,
+      "9_to_12": 6,
+      "13_to_16": 8,
+      "17_plus": 10
+    },
+    "sequential_dependency": {
+      "all_parallel_independent": 1,
+      "mostly_parallel_minor_sequence": 2,
+      "loosely_sequential": 4,
+      "strongly_sequential": 6,
+      "tightly_chained_each_depends_on_prior": 8,
+      "cascading_failure_risk": 10
+    },
+    "active_attention": {
+      "mostly_passive_set_and_forget": 1,
+      "mostly_passive_occasional_check": 2,
+      "mixed_active_and_passive": 4,
+      "mostly_active_brief_waits": 6,
+      "fully_active_no_breaks": 8,
+      "constant_vigilance_required": 10
+    },
+    "complexity_per_step": {
+      "single_simple_action": 1,
+      "one_to_two_actions": 2,
+      "two_to_three_actions": 4,
+      "multiple_sub_steps": 6,
+      "complex_multi_part": 8,
+      "technique_heavy_sub_steps": 10
+    },
+    "critical_timing": {
+      "no_timing_sensitive": 1,
+      "approximate_timing_ok": 2,
+      "loose_windows": 4,
+      "specific_windows": 6,
+      "precise_timing_important": 8,
+      "split_second_timing_critical": 10
+    }
+  }
+}

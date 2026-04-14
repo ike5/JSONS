@@ -1,0 +1,72 @@
+{
+  "scale": {
+    "min": 1,
+    "max": 10
+  },
+  "dimension_definitions": {
+    "skill_level": "Minimum cooking skill required to execute correctly",
+    "technique_count": "Number of distinct culinary techniques involved",
+    "error_tolerance": "How forgiving the recipe is to mistakes (high tolerance = low score, low tolerance = high score)",
+    "temperature_precision": "How exact temperature control must be",
+    "knife_work": "Level of knife skill required"
+  },
+  "scoring": {
+    "weights": {
+      "skill_level": 0.25,
+      "technique_count": 0.20,
+      "error_tolerance": 0.25,
+      "temperature_precision": 0.15,
+      "knife_work": 0.15
+    },
+    "method": "weighted_sum_scaled_to_10"
+  },
+  "anchors": {
+    "cereal_with_milk": 1,
+    "grilled_cheese": 2,
+    "stir_fry": 4,
+    "souffle": 8,
+    "tempering_chocolate": 10
+  },
+  "item_scoring": {
+    "skill_level": {
+      "complete_beginner": 1,
+      "basic_home_cook": 2,
+      "confident_home_cook": 4,
+      "advanced_home_cook": 6,
+      "near_professional": 8,
+      "professional_only": 10
+    },
+    "technique_count": {
+      "single_technique": 1,
+      "two_techniques": 2,
+      "three_techniques": 4,
+      "four_to_five": 6,
+      "six_to_seven": 8,
+      "eight_plus": 10
+    },
+    "error_tolerance": {
+      "very_forgiving_recoverable": 1,
+      "forgiving_most_mistakes_fixable": 2,
+      "moderately_forgiving": 4,
+      "small_margins_some_recoverability": 6,
+      "unforgiving_mistakes_ruin_dish": 8,
+      "zero_tolerance_single_error_fatal": 10
+    },
+    "temperature_precision": {
+      "no_heat_or_approximate": 1,
+      "rough_ranges_ok": 2,
+      "moderate_precision_needed": 4,
+      "specific_ranges_required": 6,
+      "tight_ranges_thermometer_recommended": 8,
+      "exact_degrees_critical": 10
+    },
+    "knife_work": {
+      "no_knife_needed": 1,
+      "basic_rough_cuts_ok": 2,
+      "standard_cuts_dice_slice": 3,
+      "uniform_cuts_matter": 5,
+      "precision_cuts_julienne_brunoise": 7,
+      "expert_cuts_tourne_fillet": 10
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "scale": {
+    "min": 1,
+    "max": 10
+  },
+  "dimension_definitions": {
+    "caloric_load": "Total calories per serving",
+    "macro_profile": "Quality of macronutrient balance (protein, carbs, fat ratios",
+    "micronutrient_density": "Presence of key vitamins and minerals (iron, calcium, vitamin_c, vitamin_d, potassium, fiber",
+    "sodium_level": "Sodium content per serving",
+    "sugar_profile": "Total sugar and added sugar content"
+  },
+  "scoring": {
+    "weights": {
+      "caloric_load": 0.20,
+      "macro_profile": 0.25,
+      "micronutrient_density": 0.25,
+      "sodium_level": 0.15,
+      "sugar_profile": 0.15
+    },
+    "method": "weighted_sum_scaled_to_10"
+  },
+  "anchors": {
+    "mixed_green_salad_grilled_chicken": 1,
+    "oatmeal_with_berries": 2,
+    "grilled_salmon_with_rice": 3,
+    "fettuccine_alfredo": 7,
+    "deep_fried_twinkie": 10
+  },
+  "note": "Score 1 = healthiest, 10 = least healthy (inverse scale: high score = unhealthy",
+  "item_scoring": {
+    "caloric_load": {
+      "under_200_per_serving": 1,
+      "200_to_350": 2,
+      "350_to_500": 4,
+      "500_to_700": 6,
+      "700_to_1000": 8,
+      "over_1000": 10
+    },
+    "macro_profile": {
+      "excellent_balance_lean_protein_complex_carbs_healthy_fats": 1,
+      "good_balance_slight_skew": 2,
+      "moderate_balance": 4,
+      "unbalanced_heavy_on_one": 6,
+      "poor_balance_refined_carbs_and_fat": 8,
+      "extremely_unbalanced_nearly_empty_calories": 10
+    },
+    "micronutrient_density": {
+      "excellent_rich_in_multiple_vitamins_minerals": 1,
+      "good_several_key_micronutrients": 2,
+      "moderate_some_nutritional_value": 4,
+      "limited_few_micronutrients": 6,
+      "poor_minimal_nutritional_value": 8,
+      "negligible_empty_calories": 10
+    },
+    "sodium_level": {
+      "under_140mg": 1,
+      "140_to_300mg": 2,
+      "300_to_600mg": 4,
+      "600_to_1000mg": 6,
+      "1000_to_1500mg": 8,
+      "over_1500mg": 10
+    },
+    "sugar_profile": {
+      "no_added_sugar_low_total": 1,
+      "minimal_added_sugar": 2,
+      "moderate_total_natural_sugars": 3,
+      "moderate_added_sugar": 5,
+      "high_sugar_content": 7,
+      "very_high_added_sugar": 10
+    }
+  }
+}
