@@ -1,0 +1,213 @@
+{
+  "description": "Defines coaching personas that nutritionists and fitness coaches can adopt, each with distinct focus areas, dimension weightings, and recommendation thresholds for guiding clients toward healthier, easier meals.",
+  "profiles": {
+    "nutritionist": {
+      "label": "Nutritionist",
+      "description": "Focuses on dietary quality, micronutrient intake, and long-term health outcomes. Recommends recipes that balance health with approachable complexity.",
+      "primary_dimensions": {
+        "health": 0.35,
+        "satiety": 0.20,
+        "ingredients": 0.15,
+        "time_to_cook": 0.10,
+        "cooking_steps": 0.05,
+        "technicality": 0.05,
+        "reproducibility": 0.05,
+        "cleanup_difficulty": 0.05
+      },
+      "recommendation_thresholds": {
+        "health_max": 4,
+        "technicality_max": 5,
+        "time_to_cook_max": 6
+      },
+      "client_tiers": {
+        "beginner": {
+          "label": "Nutrition Newcomer",
+          "description": "Client new to mindful eating. Needs simple recipes with obvious health benefits.",
+          "health_max": 3,
+          "technicality_max": 3,
+          "time_to_cook_max": 4
+        },
+        "intermediate": {
+          "label": "Health-Conscious Cook",
+          "description": "Client comfortable with basic cooking. Ready to explore nutrient-dense ingredients.",
+          "health_max": 4,
+          "technicality_max": 5,
+          "time_to_cook_max": 6
+        },
+        "advanced": {
+          "label": "Nutrition Enthusiast",
+          "description": "Experienced cook who wants to optimize macro and micronutrient profiles.",
+          "health_max": 5,
+          "technicality_max": 7,
+          "time_to_cook_max": 8
+        }
+      },
+      "typical_goals": [
+        "weight_loss",
+        "heart_health",
+        "diabetes_management",
+        "general_wellness",
+        "anti_inflammatory"
+      ]
+    },
+    "fitness_coach": {
+      "label": "Fitness Coach",
+      "description": "Focuses on meal timing, protein intake, and energy availability for training. Recommends recipes that fuel performance while remaining practical for busy athletes.",
+      "primary_dimensions": {
+        "satiety": 0.30,
+        "health": 0.25,
+        "time_to_cook": 0.15,
+        "ingredients": 0.10,
+        "pan_efficiency": 0.08,
+        "cooking_steps": 0.05,
+        "cleanup_difficulty": 0.04,
+        "technicality": 0.03
+      },
+      "recommendation_thresholds": {
+        "health_max": 5,
+        "technicality_max": 4,
+        "time_to_cook_max": 5,
+        "satiety_min": 5
+      },
+      "client_tiers": {
+        "beginner": {
+          "label": "Casual Exerciser",
+          "description": "Exercises 2-3 times per week. Needs straightforward meals that support basic activity.",
+          "health_max": 4,
+          "technicality_max": 3,
+          "time_to_cook_max": 4,
+          "satiety_min": 4
+        },
+        "intermediate": {
+          "label": "Regular Athlete",
+          "description": "Trains 4-5 times per week. Needs reliable meal prep that supports recovery.",
+          "health_max": 5,
+          "technicality_max": 4,
+          "time_to_cook_max": 5,
+          "satiety_min": 5
+        },
+        "advanced": {
+          "label": "Competitive Athlete",
+          "description": "Intense training schedule. Needs precise macros and meal timing around workouts.",
+          "health_max": 6,
+          "technicality_max": 6,
+          "time_to_cook_max": 6,
+          "satiety_min": 6
+        }
+      },
+      "typical_goals": [
+        "muscle_gain",
+        "weight_loss",
+        "endurance_fueling",
+        "recovery_nutrition",
+        "body_recomposition"
+      ]
+    },
+    "meal_prep_coach": {
+      "label": "Meal Prep Coach",
+      "description": "Specializes in batch cooking efficiency. Recommends recipes that scale well, store well, and minimize kitchen time across the week.",
+      "primary_dimensions": {
+        "time_to_cook": 0.20,
+        "pan_efficiency": 0.18,
+        "cleanup_difficulty": 0.17,
+        "output_yield": 0.15,
+        "reproducibility": 0.12,
+        "health": 0.08,
+        "cooking_steps": 0.05,
+        "ingredients": 0.05
+      },
+      "recommendation_thresholds": {
+        "technicality_max": 5,
+        "time_to_cook_max": 6,
+        "pan_efficiency_max": 5,
+        "cleanup_difficulty_max": 5
+      },
+      "client_tiers": {
+        "beginner": {
+          "label": "Prep Starter",
+          "description": "New to batch cooking. Needs recipes that are forgiving and make good leftovers.",
+          "technicality_max": 3,
+          "time_to_cook_max": 4,
+          "pan_efficiency_max": 3,
+          "cleanup_difficulty_max": 4
+        },
+        "intermediate": {
+          "label": "Weekly Prepper",
+          "description": "Preps meals once or twice a week. Comfortable managing multiple recipes simultaneously.",
+          "technicality_max": 5,
+          "time_to_cook_max": 6,
+          "pan_efficiency_max": 5,
+          "cleanup_difficulty_max": 5
+        },
+        "advanced": {
+          "label": "Bulk Prepper",
+          "description": "Prepares large batches for freezing and long-term storage. Values scalability above all.",
+          "technicality_max": 6,
+          "time_to_cook_max": 7,
+          "pan_efficiency_max": 6,
+          "cleanup_difficulty_max": 6
+        }
+      },
+      "typical_goals": [
+        "time_savings",
+        "budget_optimization",
+        "weight_loss",
+        "consistent_eating",
+        "family_meal_planning"
+      ]
+    },
+    "wellness_coach": {
+      "label": "Wellness Coach",
+      "description": "Holistic approach combining nutrition with stress reduction and mindful eating. Recommends recipes that nourish without overwhelming, favoring low-complexity, high-satisfaction meals.",
+      "primary_dimensions": {
+        "health": 0.30,
+        "satiety": 0.20,
+        "cooking_steps": 0.12,
+        "technicality": 0.12,
+        "cleanup_difficulty": 0.10,
+        "time_to_cook": 0.08,
+        "ingredients": 0.05,
+        "reproducibility": 0.03
+      },
+      "recommendation_thresholds": {
+        "health_max": 4,
+        "technicality_max": 4,
+        "cooking_steps_max": 4,
+        "cleanup_difficulty_max": 4
+      },
+      "client_tiers": {
+        "beginner": {
+          "label": "Stress-Free Starter",
+          "description": "Overwhelmed client who needs the simplest path to better eating.",
+          "health_max": 3,
+          "technicality_max": 2,
+          "cooking_steps_max": 3,
+          "cleanup_difficulty_max": 3
+        },
+        "intermediate": {
+          "label": "Mindful Eater",
+          "description": "Building a sustainable routine. Values calm, enjoyable cooking experiences.",
+          "health_max": 4,
+          "technicality_max": 4,
+          "cooking_steps_max": 4,
+          "cleanup_difficulty_max": 4
+        },
+        "advanced": {
+          "label": "Holistic Practitioner",
+          "description": "Deeply committed to wellness lifestyle. Explores therapeutic ingredients and techniques.",
+          "health_max": 5,
+          "technicality_max": 5,
+          "cooking_steps_max": 6,
+          "cleanup_difficulty_max": 5
+        }
+      },
+      "typical_goals": [
+        "stress_reduction",
+        "general_wellness",
+        "anti_inflammatory",
+        "gut_health",
+        "sleep_optimization"
+      ]
+    }
+  }
+}

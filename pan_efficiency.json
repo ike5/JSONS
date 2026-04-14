@@ -7,7 +7,7 @@
     "total_pans": "Total number of pans, pots, and bakeware needed for the entire recipe",
     "sequential_reuse": "How many times the same pan can be reused across steps without cleaning between",
     "cross_step_reuse": "Whether the primary cooking vessel is used for multiple distinct steps",
-    "pan_to_dish_ratio": "Ratio of pans used to servings produced (lower = more efficient",
+    "pan_to_dish_ratio": "Ratio of pans used to servings produced (lower = more efficient)",
     "clean_between": "Whether pans need to be washed between reuses (adds friction"
   },
   "scoring": {

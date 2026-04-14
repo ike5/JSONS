@@ -209,3 +209,102 @@ Recipe-level social and community metrics (not a 1–10 scale — uses tiers and
 
 - **popularity** — `normalize(stars) × 0.40 + positive_rate_weighted × 0.35 + normalize(total_ratings) × 0.25`
 - **influence** — `normalize(fork_count) × 0.50 + normalize(follower_count) × 0.25 + normalize(fork_descendants) × 0.25`
+
+---
+
+## Coaching Files
+
+These JSON files are designed for nutritionists, fitness coaches, and wellness professionals who use the scoring datasets above to guide clients toward healthier, easier, and goal-appropriate meals.
+
+---
+
+### `coaching_profiles.json`
+
+Defines coaching personas that a professional can adopt, each with distinct focus areas and dimension weightings:
+
+| Profile | Primary Focus | Key Dimensions |
+|---------|--------------|----------------|
+| **nutritionist** | Dietary quality, micronutrients, long-term health | health (0.35), satiety (0.20), ingredients (0.15) |
+| **fitness_coach** | Meal timing, protein, energy for training | satiety (0.30), health (0.25), time_to_cook (0.15) |
+| **meal_prep_coach** | Batch efficiency, cleanup, scalability | time_to_cook (0.20), pan_efficiency (0.18), cleanup_difficulty (0.17) |
+| **wellness_coach** | Holistic health, stress reduction, low-complexity | health (0.30), satiety (0.20), cooking_steps (0.12), technicality (0.12) |
+
+Each profile includes:
+- **primary_dimensions** — weighted scoring dimensions for recipe ranking
+- **recommendation_thresholds** — max/min dimension scores for recommending recipes
+- **client_tiers** — beginner / intermediate / advanced with tighter thresholds for newer clients
+- **typical_goals** — links to `dietary_goals.json` keys
+
+---
+
+### `dietary_goals.json`
+
+Defines dietary and health goals with nutritional targets and dimension constraints:
+
+| Goal | Key Constraints |
+|------|----------------|
+| **weight_loss** | health ≤ 4, satiety ≥ 6, technicality ≤ 4 |
+| **muscle_gain** | satiety ≥ 5, output_yield ≥ 4, health ≤ 5 |
+| **heart_health** | health ≤ 3, satiety ≥ 5, reproducibility ≤ 5 |
+| **diabetes_management** | health ≤ 3, satiety ≥ 6, reproducibility ≤ 4 |
+| **anti_inflammatory** | health ≤ 3, ingredients ≤ 6 |
+| **endurance_fueling** | health ≤ 4, output_yield ≥ 4, time_to_cook ≤ 5 |
+| **gut_health** | health ≤ 3, ingredients ≤ 5, reproducibility ≤ 4 |
+| **stress_reduction** | technicality ≤ 3, cooking_steps ≤ 3, cleanup ≤ 3 |
+| **budget_optimization** | output_yield ≥ 4, satiety ≥ 5, ingredients ≤ 4 |
+| **family_meal_planning** | satiety ≥ 5, output_yield ≥ 5, pan_efficiency ≤ 4 |
+| **general_wellness** | health ≤ 4, satiety ≥ 5, reproducibility ≤ 4 |
+| **sleep_optimization** | health ≤ 3, satiety 5–7, technicality ≤ 3 |
+
+Each goal includes `target_macros`, `caloric_target`, `dimension_constraints` with rationale, and `coaching_strategy`.
+
+---
+
+### `meal_recommendations.json`
+
+Provides recommendation logic connecting dimension scores to coaching decisions:
+
+- **recommendation_thresholds** — Four tiers (Easy / Moderate / Challenging / Advanced) with dimension score ranges that determine which recipes to show which clients
+- **meal_plan_templates** — Structured weekly and monthly plans:
+  - *Weight Loss Quick Week* — high satiety, low time, easy recipes
+  - *Athlete Fueling Week* — timed around training, moderate complexity
+  - *Beginner Cook Month* — progressive 4-week skill-building plan
+  - *Heart Health Weekly* — low sodium, high fiber, reliable recipes
+  - *Sunday Meal Prep* — batch-oriented, high yield, low cleanup
+- **substitution_strategies** — How to adjust a recipe when dimension scores exceed a client's thresholds (reduce complexity, improve health, reduce time, reduce cleanup)
+- **conflict_resolution** — Rules for handling goal conflicts (e.g., healthy but time-consuming, easy but boring)
+
+---
+
+### `skill_building_paths.json`
+
+Defines progressive cooking skill paths with milestones tied to scoring dimensions:
+
+**Skill Levels** (from novice to expert):
+- **Novice** (technicality 1–2) — boiling water, basic knife safety, simple salads
+- **Beginner** (2–3) — sauteing, roasting, pasta cooking, basic seasoning
+- **Intermediate** (3–5) — braising, pan sauces, flavor layering, batch cooking
+- **Advanced Intermediate** (5–7) — yeast dough, risotto, custards, compound butter
+- **Advanced** (7–8) — laminated dough, tempering chocolate, sous vide, fermentation
+- **Expert** (8–10) — molecular gastronomy, advanced butchery, sugar work, recipe development
+
+**Progression Paths:**
+- *Quick Weeknight Mastery* — 4 milestones from one-pan basics to 10+ recipe rotation
+- *Health-Focused Cooking* — 4 milestones from nutrition basics to recipe modification
+- *Technique Building* — 6 milestones from stovetop fundamentals to showpiece skills
+- *Family Cooking Path* — 4 milestones from kid-friendly basics to family meal prep
+
+Each milestone includes duration, dimension constraints, graduation criteria, and coaching approach.
+
+---
+
+### `coaching_tips.json`
+
+Actionable coaching messages indexed by dimension and score range. For each of the 8 dimensions (technicality, time_to_cook, health, cooking_steps, cleanup_difficulty, ingredients, satiety, reproducibility, pan_efficiency, sections), the file provides:
+
+- **coaching_message** — What the coach should communicate to the client
+- **client_encouragement** — Motivational language for the client
+- **preparation_tips** / **common_mistakes** / **nutrition_highlights** — Contextual advice
+- **healthier_swaps** — Substitution suggestions (in the health dimension)
+
+Score ranges are binned (1–2, 3–4, 5–6, 7–8, 9–10) with appropriate guidance at each level, enabling coaches to give targeted, dimension-aware advice.
