@@ -1,0 +1,45 @@
+{
+  "metric": "nutrition",
+  "description": "Per-serving nutritional values for a recipe. Core fields are always present; additional fields are populated when the nutrition data source/API provides them.",
+  "renamed_from": "health",
+  "per_serving": {
+    "calories_per_serving": {
+      "unit": "kcal",
+      "description": "Total energy per serving"
+    },
+    "macros": {
+      "protein": { "unit": "g" },
+      "fat": { "unit": "g" },
+      "sugar": { "unit": "g", "description": "Total sugars; note added vs natural when available" },
+      "fiber": { "unit": "g" }
+    },
+    "glycemic_index": {
+      "unit": "GI (0-100)",
+      "description": "Estimated glycemic index; important for diabetic users"
+    }
+  },
+  "optional_fields": {
+    "description": "Captured when the nutrition data API provides them",
+    "fields": [
+      "carbohydrates_g",
+      "saturated_fat_g",
+      "trans_fat_g",
+      "cholesterol_mg",
+      "sodium_mg",
+      "potassium_mg",
+      "calcium_mg",
+      "iron_mg",
+      "vitamin_c_mg",
+      "vitamin_d_mcg",
+      "added_sugar_g",
+      "net_carbs_g",
+      "glycemic_load"
+    ]
+  },
+  "mesh_axis": {
+    "description": "Optional derived 1-10 healthiness axis for the filter mesh. The front-end may instead let users filter on any raw field directly (e.g. a calories slider, or a glycemic_index cap for diabetics).",
+    "scale": { "min": 1, "max": 10 },
+    "orientation": "higher = less healthy (1 = most nutrient-dense, 10 = least)",
+    "derivation": "Composite of calories_per_serving, sugar, fiber, and glycemic_index relative to per-serving norms"
+  }
+}

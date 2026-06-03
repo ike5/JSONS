@@ -1,24 +1,29 @@
 {
+  "metric": "cleanup",
+  "description": "How much cleanup a recipe creates, rolled up from the tools it uses. Equipment requirements live here too.",
+  "renamed_from": "cleanup_difficulty",
   "scale": {
     "min": 1,
     "max": 10
   },
-  "dimension_definitions": {
-    "time": "Estimated time to clean (seconds to minutes)",
-    "effort": "Physical scrubbing intensity required",
-    "complexity": "Shape difficulty (crevices, holes, edges)",
-    "care": "Fragility or special handling required",
-    "size": "Bulkiness and surface area"
-  },
-  "scoring": {
-    "weights": {
-      "time": 0.35,
-      "effort": 0.25,
-      "complexity": 0.15,
-      "care": 0.15,
-      "size": 0.1
+  "orientation": "higher = more cleanup burden",
+  "recipe_rollup": {
+    "description": "Recipe-level cleanup score built from the per-tool data in `items` below.",
+    "inputs": {
+      "tool_count": "Number of distinct tools (pans, utensils, dishware, equipment) the recipe uses",
+      "wash_events": "How many times each tool must be washed. A tool reused across steps without washing between counts as 1 (a savings); a tool washed mid-recipe counts each wash (e.g. a cutting board used for raw meat then produce = 2)",
+      "wash_difficulty": "Per-tool difficulty of washing, taken from each item's `difficulty` below (a pan is harder than a spoon)"
     },
-    "method": "weighted_sum_scaled_to_10"
+    "method": "cleanup_score = scale_to_10( sum over distinct tools of ( wash_difficulty[tool] * wash_events[tool] ) )",
+    "shared_tool_savings": "A tool shared across multiple steps is counted once unless it must be washed between uses, so reuse lowers the score."
+  },
+  "item_fields": {
+    "difficulty": "Per-tool wash_difficulty (1-10), used by the recipe rollup",
+    "time": "Approximate time to wash the tool",
+    "effort": "Physical scrubbing intensity",
+    "complexity": "Shape difficulty (crevices, holes, edges)",
+    "care": "Fragility or special handling",
+    "size": "Bulkiness and surface area"
   },
   "anchors": {
     "fork": 1,

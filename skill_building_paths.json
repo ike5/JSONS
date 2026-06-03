@@ -4,12 +4,19 @@
     "novice": {
       "label": "Novice",
       "description": "Rarely or never cooks. Needs extremely simple recipes with minimal steps and familiar ingredients.",
-      "technicality_range": { "min": 1, "max": 2 },
-      "cooking_steps_range": { "min": 1, "max": 2 },
-      "time_to_cook_range": { "min": 1, "max": 3 },
-      "ingredients_range": { "min": 1, "max": 2 },
+      "steps_range": {
+        "min": 1,
+        "max": 2
+      },
+      "time_to_cook_range": {
+        "min": 1,
+        "max": 3
+      },
+      "ingredients_range": {
+        "min": 1,
+        "max": 2
+      },
       "cleanup_target_max": 2,
-      "pan_efficiency_target_max": 2,
       "techniques_to_learn": [
         "boiling_water",
         "scrambling_eggs",
@@ -37,12 +44,19 @@
     "beginner": {
       "label": "Beginner",
       "description": "Can follow a simple recipe with clear instructions. Comfortable with basic stovetop and oven use.",
-      "technicality_range": { "min": 2, "max": 3 },
-      "cooking_steps_range": { "min": 2, "max": 4 },
-      "time_to_cook_range": { "min": 2, "max": 4 },
-      "ingredients_range": { "min": 2, "max": 4 },
+      "steps_range": {
+        "min": 2,
+        "max": 4
+      },
+      "time_to_cook_range": {
+        "min": 2,
+        "max": 4
+      },
+      "ingredients_range": {
+        "min": 2,
+        "max": 4
+      },
       "cleanup_target_max": 3,
-      "pan_efficiency_target_max": 3,
       "techniques_to_learn": [
         "sauteing",
         "roasting vegetables",
@@ -70,12 +84,19 @@
     "intermediate": {
       "label": "Intermediate",
       "description": "Comfortable with most weeknight cooking. Can manage 2-3 components simultaneously. Starting to improvise.",
-      "technicality_range": { "min": 3, "max": 5 },
-      "cooking_steps_range": { "min": 4, "max": 6 },
-      "time_to_cook_range": { "min": 3, "max": 5 },
-      "ingredients_range": { "min": 3, "max": 5 },
+      "steps_range": {
+        "min": 4,
+        "max": 6
+      },
+      "time_to_cook_range": {
+        "min": 3,
+        "max": 5
+      },
+      "ingredients_range": {
+        "min": 3,
+        "max": 5
+      },
       "cleanup_target_max": 4,
-      "pan_efficiency_target_max": 4,
       "techniques_to_learn": [
         "braising_and_stewing",
         "making_pan_sauces",
@@ -103,12 +124,19 @@
     "advanced_intermediate": {
       "label": "Advanced Intermediate",
       "description": "Confident cook who can follow complex recipes and make minor substitutions. Starting to develop intuition.",
-      "technicality_range": { "min": 5, "max": 7 },
-      "cooking_steps_range": { "min": 5, "max": 8 },
-      "time_to_cook_range": { "min": 4, "max": 6 },
-      "ingredients_range": { "min": 4, "max": 6 },
+      "steps_range": {
+        "min": 5,
+        "max": 8
+      },
+      "time_to_cook_range": {
+        "min": 4,
+        "max": 6
+      },
+      "ingredients_range": {
+        "min": 4,
+        "max": 6
+      },
       "cleanup_target_max": 5,
-      "pan_efficiency_target_max": 5,
       "techniques_to_learn": [
         "yeast_dough_and_bread_baking",
         "making_risotto",
@@ -136,12 +164,19 @@
     "advanced": {
       "label": "Advanced",
       "description": "Experienced cook comfortable with most techniques. Can cook complex multi-course meals. Starting to create original recipes.",
-      "technicality_range": { "min": 7, "max": 8 },
-      "cooking_steps_range": { "min": 7, "max": 10 },
-      "time_to_cook_range": { "min": 5, "max": 8 },
-      "ingredients_range": { "min": 5, "max": 8 },
+      "steps_range": {
+        "min": 7,
+        "max": 10
+      },
+      "time_to_cook_range": {
+        "min": 5,
+        "max": 8
+      },
+      "ingredients_range": {
+        "min": 5,
+        "max": 8
+      },
       "cleanup_target_max": 7,
-      "pan_efficiency_target_max": 7,
       "techniques_to_learn": [
         "laminating_dough_for_puff_pastry_or_croissants",
         "tempering_chocolate",
@@ -169,12 +204,19 @@
     "expert": {
       "label": "Expert",
       "description": "Near-professional skill level. Can execute nearly any recipe and create original dishes. Understands food science deeply.",
-      "technicality_range": { "min": 8, "max": 10 },
-      "cooking_steps_range": { "min": 8, "max": 10 },
-      "time_to_cook_range": { "min": 6, "max": 10 },
-      "ingredients_range": { "min": 7, "max": 10 },
+      "steps_range": {
+        "min": 8,
+        "max": 10
+      },
+      "time_to_cook_range": {
+        "min": 6,
+        "max": 10
+      },
+      "ingredients_range": {
+        "min": 7,
+        "max": 10
+      },
       "cleanup_target_max": 10,
-      "pan_efficiency_target_max": 10,
       "techniques_to_learn": [
         "molecular_gastronomy_basics (spherification, gels)",
         "advanced_butchery",
@@ -210,8 +252,7 @@
           "milestone": 1,
           "label": "One-pan Basics",
           "duration_weeks": 2,
-          "technicality_max": 2,
-          "cooking_steps_max": 2,
+          "steps_max": 2,
           "time_to_cook_max": 2,
           "goal": "Master 3-4 one-pan recipes you can make without thinking",
           "graduation_criteria": "Can reliably cook a simple one-pan meal in under 20 minutes without checking a recipe"
@@ -220,8 +261,7 @@
           "milestone": 2,
           "label": "Two-component Efficiency",
           "duration_weeks": 3,
-          "technicality_max": 3,
-          "cooking_steps_max": 4,
+          "steps_max": 4,
           "time_to_cook_max": 3,
           "goal": "Learn to time a protein and a vegetable so they finish together",
           "graduation_criteria": "Can serve a hot protein and side simultaneously without either getting cold"
@@ -230,8 +270,7 @@
           "milestone": 3,
           "label": "Meal Prep Sunday",
           "duration_weeks": 3,
-          "technicality_max": 4,
-          "cooking_steps_max": 5,
+          "steps_max": 5,
           "time_to_cook_max": 5,
           "goal": "Batch-cook 3 components that mix and match for 4-5 days",
           "graduation_criteria": "Can produce 5 lunches and 4 dinners from a 90-minute Sunday session"
@@ -240,8 +279,7 @@
           "milestone": 4,
           "label": "Weeknight Warrior",
           "duration_weeks": 4,
-          "technicality_max": 5,
-          "cooking_steps_max": 6,
+          "steps_max": 6,
           "time_to_cook_max": 4,
           "goal": "Reliably cook varied, healthy 30-minute dinners on weeknights",
           "graduation_criteria": "Has a rotation of 10+ weeknight recipes and can improvise from pantry staples"
@@ -250,16 +288,14 @@
     },
     "health_focused_path": {
       "label": "Health-Focused Cooking",
-      "description": "Path focused on nutritional quality. Prioritizes health and satiety dimensions while gradually building technique.",
+      "description": "Path focused on nutritional quality. Prioritizes the nutrition dimension while gradually building technique.",
       "target_client": "Clients focused on weight loss, heart health, or managing a dietary condition",
       "milestones": [
         {
           "milestone": 1,
           "label": "Nutrition Basics",
           "duration_weeks": 2,
-          "technicality_max": 2,
-          "health_max": 3,
-          "satiety_min": 5,
+          "nutrition_max": 3,
           "goal": "Learn 4-5 simple recipes that are healthy and filling",
           "graduation_criteria": "Can identify healthy vs unhealthy ingredients and reliably prepare a nutritious meal"
         },
@@ -267,9 +303,7 @@
           "milestone": 2,
           "label": "Flavor Without Compromise",
           "duration_weeks": 3,
-          "technicality_max": 3,
-          "health_max": 3,
-          "satiety_min": 6,
+          "nutrition_max": 3,
           "goal": "Learn to make healthy food taste great using herbs, spices, acids, and umami",
           "graduation_criteria": "Can prepare a meal that is both healthy (health score 1-3) and genuinely enjoyable without relying on salt, butter, or sugar"
         },
@@ -277,10 +311,7 @@
           "milestone": 3,
           "label": "Batch Nutrition",
           "duration_weeks": 3,
-          "technicality_max": 4,
-          "health_max": 3,
-          "satiety_min": 6,
-          "output_yield_min": 4,
+          "nutrition_max": 3,
           "goal": "Master batch-cooking healthy staples for the entire week",
           "graduation_criteria": "Can plan and execute a weekly meal plan that hits health targets across all meals"
         },
@@ -288,8 +319,7 @@
           "milestone": 4,
           "label": "Nutritional Autonomy",
           "duration_weeks": 4,
-          "technicality_max": 5,
-          "health_max": 4,
+          "nutrition_max": 4,
           "goal": "Adjust any recipe to meet dietary needs: reduce sodium, increase fiber, swap fats",
           "graduation_criteria": "Can take any recipe and modify it to meet specific nutritional constraints while maintaining appeal"
         }
@@ -297,14 +327,13 @@
     },
     "technique_building_path": {
       "label": "Technique Building",
-      "description": "Path focused on gradually building cooking skills from scratch. Prioritizes technicality dimension with escalating challenge.",
+      "description": "Path focused on gradually building cooking skills from scratch. with escalating step-count and complexity.",
       "target_client": "Clients who want to become confident, skilled home cooks",
       "milestones": [
         {
           "milestone": 1,
           "label": "Stovetop Fundamentals",
           "duration_weeks": 2,
-          "technicality_max": 2,
           "goal": "Master basic stovetop control: boiling, simmering, scrambling, and pan-frying",
           "graduation_criteria": "Can cook eggs three ways, saute vegetables without burning, and bring water to proper boil/simmer"
         },
@@ -312,7 +341,6 @@
           "milestone": 2,
           "label": "Knife Skills and Prep",
           "duration_weeks": 3,
-          "technicality_max": 3,
           "goal": "Develop confident knife skills and efficient mise en place",
           "graduation_criteria": "Can dice an onion, julienne vegetables, and prep all ingredients before starting to cook"
         },
@@ -320,7 +348,6 @@
           "milestone": 3,
           "label": "Oven Confidence",
           "duration_weeks": 3,
-          "technicality_max": 4,
           "goal": "Master roasting, baking, and broiling. Understand oven temperature and timing.",
           "graduation_criteria": "Can roast a whole chicken, bake a simple bread, and properly broil fish without overcooking"
         },
@@ -328,8 +355,6 @@
           "milestone": 4,
           "label": "Multi-Component Meals",
           "duration_weeks": 3,
-          "technicality_max": 5,
-          "sections_max": 4,
           "goal": "Cook meals with protein, starch, vegetable, and sauce that all finish at the same time",
           "graduation_criteria": "Can serve a complete 3-4 component meal hot with all elements properly timed"
         },
@@ -337,7 +362,6 @@
           "milestone": 5,
           "label": "Advanced Techniques",
           "duration_weeks": 4,
-          "technicality_max": 7,
           "goal": "Learn braising, emulsification, dough-making, and flavor layering",
           "graduation_criteria": "Can execute a braise, make a pan sauce from scratch, and bake yeasted bread"
         },
@@ -345,7 +369,6 @@
           "milestone": 6,
           "label": "Showpiece Skills",
           "duration_weeks": 4,
-          "technicality_max": 8,
           "goal": "Tackle one ambitious project that demonstrates mastery (e.g., beef wellington, croissants, multi-course dinner)",
           "graduation_criteria": "Successfully completes an advanced recipe start to finish with quality results"
         }
@@ -360,9 +383,7 @@
           "milestone": 1,
           "label": "Kid-Friendly Basics",
           "duration_weeks": 2,
-          "technicality_max": 2,
           "time_to_cook_max": 3,
-          "output_yield_min": 4,
           "goal": "Master 5-6 simple meals that children will eat and that scale to family size",
           "graduation_criteria": "Can produce a balanced family meal in under 25 minutes that everyone eats"
         },
@@ -370,9 +391,6 @@
           "milestone": 2,
           "label": "Deconstruct and Customize",
           "duration_weeks": 3,
-          "technicality_max": 3,
-          "sections_max": 4,
-          "output_yield_min": 5,
           "goal": "Learn to make meals with separable components so picky eaters can customize",
           "graduation_criteria": "Can serve a meal that allows each family member to customize their plate without cooking separate meals"
         },
@@ -380,8 +398,6 @@
           "milestone": 3,
           "label": "Weekly Rotation",
           "duration_weeks": 3,
-          "technicality_max": 4,
-          "output_yield_min": 5,
           "goal": "Build a 2-week dinner rotation that covers nutritional needs and variety",
           "graduation_criteria": "Has 14 distinct dinners planned with shopping lists that cover all macro targets"
         },
@@ -389,9 +405,6 @@
           "milestone": 4,
           "label": "Family Meal Prep",
           "duration_weeks": 4,
-          "technicality_max": 5,
-          "pan_efficiency_max": 4,
-          "output_yield_min": 6,
           "goal": "Master efficient batch cooking for a family: breakfasts, lunches, and freezer meals",
           "graduation_criteria": "Can complete a 2-hour meal prep session that produces 5 breakfasts, 5 lunches, and 3 freezer dinners"
         }

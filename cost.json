@@ -1,0 +1,34 @@
+{
+  "metric": "cost",
+  "description": "Estimated cost to make the recipe, provided by the recipe author for the recipe's stated number of servings. Scales automatically when the serving calculator changes the serving count.",
+  "unit": "currency",
+  "scale": {
+    "min": 1,
+    "max": 10
+  },
+  "orientation": "higher = more expensive",
+  "fields": {
+    "estimated_total": "Author-provided estimated total cost for the full recipe as written",
+    "servings": "Number of servings that estimated_total covers (the recipe's stated yield)",
+    "currency": "ISO-4217 code, default USD"
+  },
+  "derived": {
+    "cost_per_serving": "estimated_total / servings",
+    "scaled_total": "cost_per_serving * requested_servings (from the serving calculator)"
+  },
+  "scoring": {
+    "method": "cost_per_serving mapped to a 1-10 mesh axis via buckets",
+    "mesh_axis_buckets": {
+      "under_1": 1,
+      "1_to_2": 2,
+      "2_to_3": 3,
+      "3_to_5": 4,
+      "5_to_7": 5,
+      "7_to_10": 6,
+      "10_to_15": 7,
+      "15_to_20": 8,
+      "20_to_30": 9,
+      "over_30": 10
+    }
+  }
+}
