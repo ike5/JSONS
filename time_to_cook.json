@@ -1,22 +1,31 @@
 {
+  "metric": "time_to_cook",
+  "description": "Total time investment to make the recipe, accounting for time reclaimed by running steps in parallel.",
+  "unit": "minutes",
   "scale": {
     "min": 1,
     "max": 10
   },
+  "orientation": "higher = longer",
   "dimension_definitions": {
-    "prep_time": "Time spent preparing ingredients before cooking begins (minutes)",
-    "cook_time": "Time spent actively cooking with heat or other transformation (minutes)",
-    "passive_time": "Time where no action is needed but recipe is in progress (marinating, resting, chilling, proofing)",
-    "post_cook_time": "Time for resting, cooling, plating, or finishing after cooking is done (minutes)"
+    "prep_time": "Minutes spent preparing ingredients before cooking begins (chopping, measuring, marinating setup)",
+    "cook_time": "Minutes spent actively cooking (heat applied or other active transformation)",
+    "parallel_savings": "Minutes reclaimed by running steps concurrently (e.g. chopping vegetables while water boils). Subtracted from the total."
   },
   "scoring": {
-    "weights": {
-      "prep_time": 0.30,
-      "cook_time": 0.30,
-      "passive_time": 0.15,
-      "post_cook_time": 0.25
-    },
-    "method": "weighted_sum_scaled_to_10"
+    "method": "effective_minutes = max(0, prep_time + cook_time - parallel_savings); mapped to a 1-10 mesh axis via buckets",
+    "mesh_axis_buckets": {
+      "0_to_10_min": 1,
+      "10_to_20": 2,
+      "20_to_30": 3,
+      "30_to_45": 4,
+      "45_to_60": 5,
+      "60_to_90": 6,
+      "90_to_120": 7,
+      "120_to_180": 8,
+      "180_to_240": 9,
+      "over_240": 10
+    }
   },
   "anchors": {
     "instant_noodles": 1,
@@ -24,40 +33,5 @@
     "spaghetti_bolognese": 4,
     "slow_roasted_pork_shoulder": 7,
     "beef_wellington": 10
-  },
-  "item_scoring": {
-    "prep_time": {
-      "0_to_5_minutes": 1,
-      "5_to_15": 2,
-      "15_to_30": 4,
-      "30_to_45": 6,
-      "45_to_60": 8,
-      "over_60": 10
-    },
-    "cook_time": {
-      "0_to_5_minutes": 1,
-      "5_to_15": 2,
-      "15_to_30": 3,
-      "30_to_60": 5,
-      "60_to_120": 7,
-      "over_120": 10
-    },
-    "passive_time": {
-      "none": 1,
-      "under_15_minutes": 2,
-      "15_to_30": 3,
-      "30_to_60": 4,
-      "1_to_4_hours": 6,
-      "4_to_8_hours": 8,
-      "over_8_hours_overnight": 10
-    },
-    "post_cook_time": {
-      "none_serve_immediately": 1,
-      "brief_under_5_min_plating": 2,
-      "5_to_10_resting_or_plating": 3,
-      "10_to_20_cooling_resting_plating": 5,
-      "20_to_45_assembly_intensive": 7,
-      "over_45_complex_finishing": 10
-    }
   }
 }

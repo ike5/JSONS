@@ -14,25 +14,16 @@
         "typical_range": "1200-1800"
       },
       "dimension_constraints": {
-        "health": {
+        "nutrition": {
           "max": 4,
           "ideal_max": 3,
           "rationale": "Must be nutritionally dense to avoid hunger on reduced calories"
-        },
-        "satiety": {
-          "min": 6,
-          "ideal_min": 7,
-          "rationale": "High satiety prevents overeating between meals"
         },
         "time_to_cook": {
           "max": 5,
           "rationale": "Complex recipes raise dropout risk for calorie-restricted clients"
         },
-        "technicality": {
-          "max": 4,
-          "rationale": "Sustainability drops if cooking feels like a chore"
-        },
-        "cleanup_difficulty": {
+        "cleanup": {
           "max": 4,
           "rationale": "High cleanup friction discourages consistent home cooking"
         }
@@ -52,26 +43,14 @@
         "typical_range": "2500-3500"
       },
       "dimension_constraints": {
-        "health": {
+        "nutrition": {
           "max": 5,
           "ideal_max": 4,
           "rationale": "Need quality nutrients but higher calories are acceptable"
         },
-        "satiety": {
-          "min": 5,
-          "rationale": "Moderate satiety helps meet higher caloric needs without excessive fullness"
-        },
         "time_to_cook": {
           "max": 6,
           "rationale": "Athletes often cook larger portions; moderate complexity is acceptable"
-        },
-        "technicality": {
-          "max": 5,
-          "rationale": "Can handle moderate technique but efficiency matters"
-        },
-        "output_yield": {
-          "min": 4,
-          "rationale": "Need recipes that produce multiple servings for meal prep"
         }
       },
       "coaching_strategy": "Focus on protein-dense recipes with good output yield. Encourage batch cooking of grains and proteins. Suggest simple sauces and marinades to add calories without complexity."
@@ -89,14 +68,10 @@
         "typical_range": "1500-2200"
       },
       "dimension_constraints": {
-        "health": {
+        "nutrition": {
           "max": 3,
           "ideal_max": 2,
           "rationale": "Heart-healthy recipes must score very well on nutritional quality"
-        },
-        "satiety": {
-          "min": 5,
-          "rationale": "Satiety prevents overconsumption of processed snacks"
         },
         "ingredients": {
           "max": 5,
@@ -127,21 +102,17 @@
         "typical_range": "1500-2000"
       },
       "dimension_constraints": {
-        "health": {
+        "nutrition": {
           "max": 3,
           "ideal_max": 2,
           "rationale": "Nutritional quality is paramount for blood sugar management"
-        },
-        "satiety": {
-          "min": 6,
-          "rationale": "Stable satiety prevents blood sugar crashes and binge eating"
         },
         "reproducibility": {
           "max": 4,
           "ideal_max": 3,
           "rationale": "Consistent carbohydrate amounts require precise recipes"
         },
-        "sugar_profile_note": "All recipes should score 1-3 on health.sugar_profile"
+        "sugar_profile_note": "All recipes should score 1-3 on nutrition.sugar_profile"
       },
       "coaching_strategy": "Build meal plans around low-glycemic index ingredients. Pair carbs with protein and fat to slow absorption. Emphasize consistent portion sizes and meal timing. Avoid recipes with high sugar_profile scores."
     },
@@ -158,7 +129,7 @@
         "typical_range": "1600-2200"
       },
       "dimension_constraints": {
-        "health": {
+        "nutrition": {
           "max": 3,
           "ideal_max": 2,
           "rationale": "Anti-inflammatory diets require maximum nutrient density"
@@ -167,13 +138,9 @@
           "max": 6,
           "rationale": "May tolerate specialty sourcing for turmeric, wild salmon, etc."
         },
-        "cooking_steps": {
+        "steps": {
           "max": 5,
           "rationale": "Gentle cooking methods (steaming, low-heat sauteing) are preferred; avoid charring"
-        },
-        "technicality": {
-          "max": 5,
-          "rationale": "Should be approachable for chronic inflammation clients who may have low energy"
         }
       },
       "coaching_strategy": "Focus on colorful vegetables, fatty fish, nuts, seeds, and anti-inflammatory spices (turmeric, ginger, garlic). Prioritize steaming, poaching, and raw preparations. Avoid high-heat methods and processed oils."
@@ -191,26 +158,13 @@
         "typical_range": "2500-4000"
       },
       "dimension_constraints": {
-        "health": {
+        "nutrition": {
           "max": 4,
           "rationale": "Need carb-heavy meals; some refined carbs acceptable during training windows"
-        },
-        "satiety": {
-          "min": 4,
-          "max": 7,
-          "rationale": "Moderate satiety allows consuming enough calories without excessive fullness"
         },
         "time_to_cook": {
           "max": 5,
           "rationale": "Athletes need efficient meal preparation"
-        },
-        "output_yield": {
-          "min": 4,
-          "rationale": "Need substantial portion sizes for caloric needs"
-        },
-        "pan_efficiency": {
-          "max": 4,
-          "rationale": "Efficient cleanup supports consistent fueling"
         }
       },
       "coaching_strategy": "Time carb-heavy meals around training. Prioritize simple recipes with high output yield. Batch-cook grains and starches. Suggest easy-to-digest pre-workout and simple recovery meals."
@@ -228,22 +182,14 @@
         "typical_range": "1500-2000"
       },
       "dimension_constraints": {
-        "health": {
+        "nutrition": {
           "max": 3,
           "ideal_max": 2,
           "rationale": "Gut-healing diets require high nutrient density and minimal processing"
         },
-        "satiety": {
-          "min": 5,
-          "rationale": "Fiber-rich foods naturally support satiety"
-        },
         "ingredients": {
           "max": 5,
           "rationale": "Should use whole, recognizable ingredients; minimal processed items"
-        },
-        "technicality": {
-          "max": 4,
-          "rationale": "Clients with gut issues often have low energy; keep cooking simple"
         },
         "reproducibility": {
           "max": 4,
@@ -265,20 +211,15 @@
         "typical_range": "1600-2200"
       },
       "dimension_constraints": {
-        "health": {
+        "nutrition": {
           "max": 4,
           "rationale": "Balanced nutrition supports stress management"
         },
-        "technicality": {
-          "max": 3,
-          "ideal_max": 2,
-          "rationale": "Primary goal is reducing cooking stress; must be easy"
-        },
-        "cooking_steps": {
+        "steps": {
           "max": 3,
           "rationale": "Minimal steps reduce decision fatigue"
         },
-        "cleanup_difficulty": {
+        "cleanup": {
           "max": 3,
           "rationale": "Low cleanup keeps the experience pleasant"
         },
@@ -306,25 +247,15 @@
         "typical_range": "variable_by_household"
       },
       "dimension_constraints": {
-        "health": {
+        "nutrition": {
           "max": 4,
           "rationale": "Budget meals should still be nutritious"
         },
-        "output_yield": {
-          "min": 4,
-          "rationale": "Higher yield means lower cost per serving"
-        },
-        "satiety": {
-          "min": 5,
-          "rationale": "High-satiety budget meals prevent expensive snacking"
-        },
-        "waste_ratio_note": "Prefer recipes with low waste_ratio (output_yield.waste_ratio score 1-3)",
         "ingredients": {
           "max": 4,
           "ideal_max": 3,
           "rationale": "Should use affordable, commonly available ingredients"
-        },
-        "leftover_quality_note": "Prefer recipes where leftover_quality score is 1-4 (holds well as leftovers)"
+        }
       },
       "coaching_strategy": "Focus on beans, lentils, eggs, chicken thighs, and seasonal produce. Plan weekly menus around sales. Batch-cook staple grains and legumes. Use root-to-leaf cooking to minimize waste. Prefer recipes that freeze well."
     },
@@ -341,29 +272,13 @@
         "typical_range": "varies_by_age_and_activity"
       },
       "dimension_constraints": {
-        "health": {
+        "nutrition": {
           "max": 4,
           "rationale": "Balanced nutrition for growing children and adults"
-        },
-        "satiety": {
-          "min": 5,
-          "rationale": "Meals must fill everyone up to reduce snacking"
-        },
-        "output_yield": {
-          "min": 5,
-          "rationale": "Family meals need multiple servings"
         },
         "time_to_cook": {
           "max": 5,
           "rationale": "Busy families need reasonably timed meals"
-        },
-        "pan_efficiency": {
-          "max": 4,
-          "rationale": "Minimize cleanup for practical sustainability"
-        },
-        "sections": {
-          "max": 5,
-          "rationale": "Separate components allow customization for picky eaters (sauce on the side, etc.)"
         }
       },
       "coaching_strategy": "Choose recipes that scale well and allow deconstruction (separate proteins, sauces, sides). Use mild base flavors with optional spice additions. Prepare extra portions for lunch leftovers. Involve children in simple tasks to build food acceptance."
@@ -381,22 +296,14 @@
         "typical_range": "1800-2400"
       },
       "dimension_constraints": {
-        "health": {
+        "nutrition": {
           "max": 4,
           "ideal_max": 3,
           "rationale": "Should lean healthy without being restrictive"
         },
-        "satiety": {
-          "min": 5,
-          "rationale": "Satisfying meals prevent overeating and snacking"
-        },
         "time_to_cook": {
           "max": 5,
           "rationale": "Sustainable long-term cooking habits require reasonable time"
-        },
-        "technicality": {
-          "max": 4,
-          "rationale": "Enjoyable cooking that builds confidence"
         },
         "reproducibility": {
           "max": 4,
@@ -418,24 +325,15 @@
         "typical_range": "400-600_per_dinner"
       },
       "dimension_constraints": {
-        "health": {
+        "nutrition": {
           "max": 3,
           "rationale": "Sleep-supportive meals should be nutritionally clean"
-        },
-        "satiety": {
-          "min": 5,
-          "max": 7,
-          "rationale": "Satisfied but not overfull; heavy meals disrupt sleep"
         },
         "time_to_cook": {
           "max": 4,
           "rationale": "Evening cooking should be relaxing, not stressful"
         },
-        "technicality": {
-          "max": 3,
-          "rationale": "End-of-day cooking should be simple and calming"
-        },
-        "sugar_profile_note": "All recipes should score 1-3 on health.sugar_profile (no sugar crashes before bed)"
+        "sugar_profile_note": "All recipes should score 1-3 on nutrition.sugar_profile (no sugar crashes before bed)"
       },
       "coaching_strategy": "Recommend turkey, salmon, eggs, nuts, and seeds for tryptophan. Pair with complex carbs (sweet potatoes, whole grains) to aid serotonin production. Avoid caffeine, high sugar, heavy spice, and large portions. Suggest eating 2-3 hours before bed."
     }

@@ -5,12 +5,21 @@
       "label": "Easy",
       "description": "Recipes that almost anyone can make successfully with minimal experience",
       "dimensions": {
-        "technicality": { "max": 3 },
-        "cooking_steps": { "max": 3 },
-        "time_to_cook": { "max": 3 },
-        "cleanup_difficulty": { "max": 3 },
-        "ingredients": { "max": 3 },
-        "reproducibility": { "max": 3 }
+        "steps": {
+          "max": 3
+        },
+        "time_to_cook": {
+          "max": 3
+        },
+        "cleanup": {
+          "max": 3
+        },
+        "ingredients": {
+          "max": 3
+        },
+        "reproducibility": {
+          "max": 3
+        }
       },
       "coaching_note": "These recipes build confidence. Encourage clients to master these first before moving up."
     },
@@ -18,12 +27,26 @@
       "label": "Moderate",
       "description": "Recipes that require some cooking experience but are still approachable",
       "dimensions": {
-        "technicality": { "min": 3, "max": 5 },
-        "cooking_steps": { "min": 3, "max": 5 },
-        "time_to_cook": { "min": 3, "max": 5 },
-        "cleanup_difficulty": { "min": 3, "max": 5 },
-        "ingredients": { "min": 3, "max": 5 },
-        "reproducibility": { "min": 3, "max": 5 }
+        "steps": {
+          "min": 3,
+          "max": 5
+        },
+        "time_to_cook": {
+          "min": 3,
+          "max": 5
+        },
+        "cleanup": {
+          "min": 3,
+          "max": 5
+        },
+        "ingredients": {
+          "min": 3,
+          "max": 5
+        },
+        "reproducibility": {
+          "min": 3,
+          "max": 5
+        }
       },
       "coaching_note": "Good for clients ready to expand their skills. Suggest pairing with an easy side to keep the total meal manageable."
     },
@@ -31,12 +54,26 @@
       "label": "Challenging",
       "description": "Recipes requiring solid cooking fundamentals and willingness to follow multi-step processes",
       "dimensions": {
-        "technicality": { "min": 5, "max": 7 },
-        "cooking_steps": { "min": 5, "max": 7 },
-        "time_to_cook": { "min": 5, "max": 7 },
-        "cleanup_difficulty": { "min": 5, "max": 7 },
-        "ingredients": { "min": 5, "max": 7 },
-        "reproducibility": { "min": 5, "max": 7 }
+        "steps": {
+          "min": 5,
+          "max": 7
+        },
+        "time_to_cook": {
+          "min": 5,
+          "max": 7
+        },
+        "cleanup": {
+          "min": 5,
+          "max": 7
+        },
+        "ingredients": {
+          "min": 5,
+          "max": 7
+        },
+        "reproducibility": {
+          "min": 5,
+          "max": 7
+        }
       },
       "coaching_note": "Reserve for motivated clients with a solid foundation. Plan these for weekends or meal-prep days when time pressure is low."
     },
@@ -44,12 +81,21 @@
       "label": "Advanced",
       "description": "Complex recipes for experienced cooks or highly motivated clients",
       "dimensions": {
-        "technicality": { "min": 7 },
-        "cooking_steps": { "min": 7 },
-        "time_to_cook": { "min": 7 },
-        "cleanup_difficulty": { "min": 7 },
-        "ingredients": { "min": 7 },
-        "reproducibility": { "min": 7 }
+        "steps": {
+          "min": 7
+        },
+        "time_to_cook": {
+          "min": 7
+        },
+        "cleanup": {
+          "min": 7
+        },
+        "ingredients": {
+          "min": 7
+        },
+        "reproducibility": {
+          "min": 7
+        }
       },
       "coaching_note": "Only recommend to clients who have demonstrated competence at lower tiers. These are aspirational recipes that demonstrate growth."
     }
@@ -60,10 +106,8 @@
       "goal": "weight_loss",
       "description": "Seven-day plan focused on high-satiety, low-calorie meals with minimal prep time",
       "daily_targets": {
-        "health_avg_max": 3,
-        "satiety_avg_min": 6,
-        "time_to_cook_avg_max": 4,
-        "technicality_avg_max": 3
+        "nutrition_avg_max": 3,
+        "time_to_cook_avg_max": 4
       },
       "structure": {
         "breakfast": {
@@ -95,9 +139,7 @@
       "goal": "endurance_fueling",
       "description": "Seven-day plan timed around training sessions with higher carb intake on training days",
       "daily_targets": {
-        "health_avg_max": 4,
-        "satiety_avg_min": 5,
-        "output_yield_avg_min": 4,
+        "nutrition_avg_max": 4,
         "time_to_cook_avg_max": 5
       },
       "structure": {
@@ -130,39 +172,34 @@
       "goal": "general_wellness",
       "description": "Four-week progressive plan that builds cooking skills while maintaining nutritional quality",
       "daily_targets": {
-        "health_avg_max": 3,
-        "technicality_max": "progressive",
+        "nutrition_avg_max": 3,
         "time_to_cook_max": "progressive"
       },
       "weeks": {
         "week_1": {
           "label": "Confidence Building",
-          "technicality_max": 2,
-          "cooking_steps_max": 2,
+          "steps_max": 2,
           "time_to_cook_max": 3,
           "focus": "One-pan recipes with minimal steps. Build confidence and enjoyment.",
           "recipes_needed": 5
         },
         "week_2": {
           "label": "Expanding Skills",
-          "technicality_max": 3,
-          "cooking_steps_max": 3,
+          "steps_max": 3,
           "time_to_cook_max": 4,
           "focus": "Introduce two-component meals (protein + side). Learn basic sauteing and roasting.",
           "recipes_needed": 5
         },
         "week_3": {
           "label": "Building Complexity",
-          "technicality_max": 4,
-          "cooking_steps_max": 4,
+          "steps_max": 4,
           "time_to_cook_max": 5,
           "focus": "Three-component meals. Introduce sauces. Practice knife skills.",
           "recipes_needed": 5
         },
         "week_4": {
           "label": "Consolidation",
-          "technicality_max": 5,
-          "cooking_steps_max": 5,
+          "steps_max": 5,
           "time_to_cook_max": 6,
           "focus": "Apply all learned skills. Attempt one challenging recipe. Plan a full meal.",
           "recipes_needed": 5
@@ -176,10 +213,9 @@
       "goal": "heart_health",
       "description": "Seven-day plan emphasizing low sodium, omega-3 rich foods, and fiber-dense meals",
       "daily_targets": {
-        "health_avg_max": 3,
-        "satiety_avg_min": 5,
+        "nutrition_avg_max": 3,
         "reproducibility_avg_max": 4,
-        "sodium_note": "All recipes must score 1-3 on health.sodium_level"
+        "sodium_note": "All recipes must score 1-3 on nutrition.sodium_level"
       },
       "structure": {
         "breakfast": {
@@ -211,9 +247,7 @@
       "goal": "time_savings",
       "description": "Single-day batch cooking session to produce meals for the entire work week",
       "daily_targets": {
-        "output_yield_min": 5,
-        "cleanup_difficulty_max": 5,
-        "pan_efficiency_max": 4,
+        "cleanup_max": 5,
         "reproducibility_max": 4
       },
       "structure": {
@@ -240,52 +274,76 @@
   },
   "substitution_strategies": {
     "reduce_complexity": {
-      "trigger": "When technicality > 5 or cooking_steps > 5 for a client whose max is lower",
+      "trigger": "When steps > 5 for a client whose max is lower",
       "strategies": [
         {
           "strategy": "Replace homemade sauce with quality pre-made sauce",
-          "dimension_impact": { "technicality": -2, "cooking_steps": -2, "time_to_cook": -1, "ingredients": -1 }
+          "dimension_impact": {
+            "steps": -2,
+            "time_to_cook": -1,
+            "ingredients": -1
+          }
         },
         {
           "strategy": "Replace from-scratch dough with store-bought",
-          "dimension_impact": { "technicality": -3, "cooking_steps": -2, "time_to_cook": -3, "sections": -2 }
+          "dimension_impact": {
+            "steps": -2,
+            "time_to_cook": -3
+          }
         },
         {
           "strategy": "Use pre-cut or frozen vegetables instead of hand-prepped",
-          "dimension_impact": { "ingredients": -1, "technicality": -1, "time_to_cook": -2 }
+          "dimension_impact": {
+            "ingredients": -1,
+            "time_to_cook": -2
+          }
         },
         {
           "strategy": "Replace multi-step breading with simple pan-sear",
-          "dimension_impact": { "technicality": -2, "cooking_steps": -2, "cleanup_difficulty": -2, "pan_efficiency": -1 }
+          "dimension_impact": {
+            "steps": -2,
+            "cleanup": -2
+          }
         },
         {
           "strategy": "Convert multi-section recipe to simpler presentation (e.g., deconstructed)",
-          "dimension_impact": { "sections": -2, "assembly_complexity": -3, "technicality": -1 }
+          "dimension_impact": {}
         }
       ]
     },
     "improve_health": {
-      "trigger": "When health score > 5 and goal requires health_max <= 4",
+      "trigger": "When nutrition score > 5 and goal requires nutrition_max <= 4",
       "strategies": [
         {
           "strategy": "Swap refined grains for whole grains",
-          "dimension_impact": { "health": -1, "satiety": 1, "ingredients": 1 }
+          "dimension_impact": {
+            "nutrition": -1,
+            "ingredients": 1
+          }
         },
         {
           "strategy": "Reduce sodium by half and add acid (lemon juice, vinegar) instead",
-          "dimension_impact": { "health": -1 }
+          "dimension_impact": {
+            "nutrition": -1
+          }
         },
         {
           "strategy": "Replace heavy cream with Greek yogurt or evaporated skim milk",
-          "dimension_impact": { "health": -2, "satiety": 1 }
+          "dimension_impact": {
+            "nutrition": -2
+          }
         },
         {
           "strategy": "Add extra vegetables to bulk up volume without adding calories",
-          "dimension_impact": { "health": -1, "satiety": 1, "output_yield": 1 }
+          "dimension_impact": {
+            "nutrition": -1
+          }
         },
         {
           "strategy": "Reduce added sugar by 50% and add vanilla or cinnamon for perceived sweetness",
-          "dimension_impact": { "health": -1 }
+          "dimension_impact": {
+            "nutrition": -1
+          }
         }
       ]
     },
@@ -294,44 +352,67 @@
       "strategies": [
         {
           "strategy": "Use pressure cooker or Instant Pot to convert slow-cook recipes",
-          "dimension_impact": { "time_to_cook": -4, "technicality": -1 }
+          "dimension_impact": {
+            "time_to_cook": -4
+          }
         },
         {
           "strategy": "Batch-cook protein on Sunday and reheat throughout the week",
-          "dimension_impact": { "time_to_cook": -3, "reproducibility": -1, "output_yield": 2 }
+          "dimension_impact": {
+            "time_to_cook": -3,
+            "reproducibility": -1
+          }
         },
         {
           "strategy": "Prep all mise en place the night before",
-          "dimension_impact": { "time_to_cook": -2, "cooking_steps": -1 }
+          "dimension_impact": {
+            "time_to_cook": -2,
+            "steps": -1
+          }
         },
         {
           "strategy": "Use sheet-pan method instead of multi-pot cooking",
-          "dimension_impact": { "time_to_cook": -1, "pan_efficiency": -2, "cleanup_difficulty": -2 }
+          "dimension_impact": {
+            "time_to_cook": -1,
+            "cleanup": -2
+          }
         },
         {
           "strategy": "Choose faster-cooking protein (shrimp vs braised beef, chicken breast vs pork shoulder)",
-          "dimension_impact": { "time_to_cook": -3, "ingredients": 1 }
+          "dimension_impact": {
+            "time_to_cook": -3,
+            "ingredients": 1
+          }
         }
       ]
     },
     "reduce_cleanup": {
-      "trigger": "When cleanup_difficulty > 5 or pan_efficiency > 5 and client threshold is lower",
+      "trigger": "When cleanup > 5 and client threshold is lower",
       "strategies": [
         {
           "strategy": "Convert to one-pan or sheet-pan method",
-          "dimension_impact": { "pan_efficiency": -4, "cleanup_difficulty": -3, "sections": -1 }
+          "dimension_impact": {
+            "cleanup": -3
+          }
         },
         {
           "strategy": "Use foil or parchment lining to eliminate scrubbing",
-          "dimension_impact": { "cleanup_difficulty": -2 }
+          "dimension_impact": {
+            "cleanup": -2
+          }
         },
         {
           "strategy": "Cook components sequentially in the same pan, wiping between",
-          "dimension_impact": { "pan_efficiency": -2, "cleanup_difficulty": -1, "time_to_cook": 1 }
+          "dimension_impact": {
+            "cleanup": -1,
+            "time_to_cook": 1
+          }
         },
         {
           "strategy": "Choose recipes that use dishwasher-safe items only",
-          "dimension_impact": { "cleanup_difficulty": -2 }
+          "dimension_impact": {
+            "cleanup": -2
+          }
         }
       ]
     }

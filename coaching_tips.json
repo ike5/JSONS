@@ -1,94 +1,6 @@
 {
   "description": "Coaching tips indexed by dimension and score range. Coaches use these to communicate with clients about specific aspects of a recipe, set expectations, and provide actionable guidance.",
   "tips": {
-    "technicality": {
-      "dimension_ref": "technicality.json",
-      "score_ranges": {
-        "1_to_2": {
-          "label": "Beginner Friendly",
-          "coaching_message": "This recipe is straightforward and perfect for building confidence. Focus on following the steps in order and you will succeed.",
-          "client_encouragement": "You've got this! This is a great recipe to start with. Take your time and enjoy the process.",
-          "common_mistakes": [
-            "Overthinking simple steps",
-            "Not preheating the pan or oven",
-            "Skipping the salt"
-          ],
-          "preparation_tips": [
-            "Read through the entire recipe once before starting",
-            "Gather all ingredients and equipment before you begin",
-            "Set a timer for any waiting steps"
-          ]
-        },
-        "3_to_4": {
-          "label": "Moderate Comfort",
-          "coaching_message": "This recipe introduces a technique or two that may be new, but nothing that requires special training. Good for building your repertoire.",
-          "client_encouragement": "You're ready for this! Trust the recipe, and don't worry about perfection on the first try.",
-          "common_mistakes": [
-            "Not reading the recipe through before starting",
-            "Crowding the pan when sauteing",
-            "Under-seasoning out of caution"
-          ],
-          "preparation_tips": [
-            "Prep all ingredients before cooking (mise en place)",
-            "Use a timer for each step that involves waiting",
-            "Taste as you go and adjust seasoning gradually"
-          ]
-        },
-        "5_to_6": {
-          "label": "Stretch Recipe",
-          "coaching_message": "This recipe requires solid fundamentals and attention to multiple cooking processes. Take your time and do not try to rush.",
-          "client_encouragement": "This is where real cooking skills develop. The extra effort is worth it. Allow more time than you think you need.",
-          "common_mistakes": [
-            "Trying to rush through time-sensitive steps",
-            "Not prepping ingredients in advance",
-            "Multitasking when the recipe requires focused attention",
-            "Skipping the resting or cooling step"
-          ],
-          "preparation_tips": [
-            "Do all chopping and measuring before turning on any heat",
-            "Read through and mentally rehearse the sequence of steps",
-            "Set up a clean workspace and have towels ready",
-            "Plan which pans you need and have them ready"
-          ]
-        },
-        "7_to_8": {
-          "label": "Advanced Challenge",
-          "coaching_message": "This recipe demands strong technique and careful timing. Plan to make it when you have plenty of time and minimal distractions.",
-          "client_encouragement": "This is a project recipe. Give yourself permission for it not to be perfect the first time. The learning is in the doing.",
-          "common_mistakes": [
-            "Substituting key ingredients without understanding the impact",
-            "Starting without reading the full recipe and timeline",
-            "Attempting multi-tasking beyond what the recipe allows",
-            "Not having the right equipment ready at critical moments"
-          ],
-          "preparation_tips": [
-            "Read the recipe at least twice, the day before and again before starting",
-            "Shop for all ingredients in advance, including any specialty items",
-            "Do a complete mise en place: every ingredient pre-measured and every tool laid out",
-            "Plan your timing backwards from when you want to serve",
-            "Have a cooling rack, timer, and thermometer ready before starting"
-          ]
-        },
-        "9_to_10": {
-          "label": "Expert Level",
-          "coaching_message": "This recipe is near-professional in difficulty. It may take multiple attempts to master. Consider it a learning project rather than a quick dinner.",
-          "client_encouragement": "This is an ambitious project. Even professionals practice these techniques repeatedly. Approach it as a learning experience first, a meal second.",
-          "common_mistakes": [
-            "Attempting without adequate preparation time",
-            "Expecting first-attempt perfection",
-            "Not researching the underlying technique before starting",
-            "Rushing through precision steps"
-          ],
-          "preparation_tips": [
-            "Watch a video tutorial of the technique before attempting",
-            "Practice individual techniques separately before combining them",
-            "Allocate at least double the listed time for your first attempt",
-            "Have a backup meal plan in case things do not work out",
-            "Take notes on what went well and what to improve for next time"
-          ]
-        }
-      }
-    },
     "time_to_cook": {
       "dimension_ref": "time_to_cook.json",
       "score_ranges": {
@@ -145,9 +57,9 @@
         }
       }
     },
-    "health": {
-      "dimension_ref": "health.json",
-      "note": "Health score uses an inverse scale: 1 = healthiest, 10 = least healthy",
+    "nutrition": {
+      "dimension_ref": "nutrition.json",
+      "note": "Nutrition mesh-axis score uses an inverse scale: 1 = healthiest, 10 = least healthy. Raw per-serving values (calories, macros, glycemic_index) live in nutrition.json.",
       "score_ranges": {
         "1_to_2": {
           "label": "Excellent Choice",
@@ -204,8 +116,8 @@
         }
       }
     },
-    "cooking_steps": {
-      "dimension_ref": "cooking_steps.json",
+    "steps": {
+      "dimension_ref": "steps.json",
       "score_ranges": {
         "1_to_2": {
           "label": "Minimal Steps",
@@ -261,8 +173,8 @@
         }
       }
     },
-    "cleanup_difficulty": {
-      "dimension_ref": "cleanup_difficulty.json",
+    "cleanup": {
+      "dimension_ref": "cleanup.json",
       "score_ranges": {
         "1_to_2": {
           "label": "Minimal Cleanup",
@@ -320,103 +232,52 @@
     },
     "ingredients": {
       "dimension_ref": "ingredients.json",
+      "note": "Score reflects the count of distinct ingredients only (1-2 = roughly 1-5 items, 9-10 = 26+ items)",
       "score_ranges": {
         "1_to_2": {
-          "label": "Pantry Staples",
-          "coaching_message": "Simple ingredients you likely already have or can find at any grocery store.",
-          "client_encouragement": "No shopping trip needed. Check your pantry and you are probably ready to go.",
+          "label": "Few Ingredients",
+          "coaching_message": "A short ingredient list of just a handful of items. Quick to shop for and easy to keep track of while cooking.",
+          "client_encouragement": "Barely a shopping list. Grab a few things and you are ready to go.",
           "tips": [
-            "Keep these staple ingredients stocked at all times",
-            "Consider memorizing 2-3 recipes at this level for no-plan emergencies"
+            "Great for no-plan nights when you do not want a big shop",
+            "Keep these staples stocked so you can make it on a whim"
           ]
         },
         "3_to_4": {
-          "label": "Easy to Source",
-          "coaching_message": "A couple of items you may need to pick up, but everything is available at a standard grocery store.",
-          "client_encouragement": "One grocery run and you are set. Nothing exotic here.",
+          "label": "Short List",
+          "coaching_message": "A modest number of ingredients. Manageable for a single grocery run and easy to lay out before you start.",
+          "client_encouragement": "Nothing overwhelming here. One trip to the store covers it.",
           "tips": [
-            "Check your pantry first before shopping to avoid duplicates",
-            "Buy a little extra of any specialty ingredient so you can make it again without a special trip"
+            "Check your pantry first to avoid buying duplicates",
+            "Lay everything out before cooking so nothing gets missed"
           ]
         },
         "5_to_6": {
-          "label": "Some Sourcing Needed",
-          "coaching_message": "A few specialty ingredients that may require a specific store or section. Plan your shopping in advance.",
-          "client_encouragement": "The unique ingredients are what make this dish special. They are worth seeking out.",
+          "label": "Moderate List",
+          "coaching_message": "A fuller ingredient list. Worth organizing your mise en place so you do not lose track mid-recipe.",
+          "client_encouragement": "More to gather, but a little organization keeps it smooth.",
           "tips": [
-            "Research where to find specialty ingredients before you need them",
-            "Many specialty items can be ordered online if not locally available",
-            "Ask the coaching app for substitution suggestions if you cannot find something",
-            "Buy shelf-stable specialty items in bulk when you find them"
+            "Group ingredients by recipe stage as you prep",
+            "Measure everything out before turning on any heat"
           ]
         },
         "7_to_8": {
-          "label": "Specialty Ingredients",
-          "coaching_message": "Multiple ingredients that require specialty stores, ethnic markets, or advance planning.",
-          "client_encouragement": "Building a pantry of specialty ingredients opens up whole new cuisines. Consider it an investment.",
+          "label": "Long List",
+          "coaching_message": "A lot of distinct ingredients. Budget extra shopping and prep time, and double-check nothing is forgotten.",
+          "client_encouragement": "It is a bigger gather, but ticking items off a list keeps it under control.",
           "tips": [
-            "Shop at ethnic markets for authenticity and better prices",
-            "Consider making this recipe as part of a series using similar ingredients to avoid waste",
-            "Substitutions exist for most specialty items but will change the character of the dish",
-            "Freeze or preserve leftover specialty ingredients for future use"
+            "Shop from a written checklist and tick items off",
+            "Pre-portion ingredients into bowls so the cook itself flows quickly"
           ]
         },
         "9_to_10": {
-          "label": "Hard to Source",
-          "coaching_message": "This recipe requires ingredients that may be seasonal, regional, or difficult to obtain.",
-          "client_encouragement": "If you cannot find a specific ingredient, do not give up on the whole recipe. Ask about substitutions.",
+          "label": "Very Long List",
+          "coaching_message": "An extensive ingredient list. This is a project recipe to shop for carefully and prep well in advance.",
+          "client_encouragement": "Long lists look daunting, but full mise en place turns it into assembly.",
           "tips": [
-            "Call stores before making a special trip",
-            "Check online specialty food retailers",
-            "Consider seasonal timing: some ingredients are only available certain times of year",
-            "Learn which substitutions preserve the essence of the dish",
-            "If an ingredient is truly unavailable, consider a related recipe that uses accessible alternatives"
-          ]
-        }
-      }
-    },
-    "satiety": {
-      "dimension_ref": "satiety.json",
-      "score_ranges": {
-        "1_to_3": {
-          "label": "Light Snack",
-          "coaching_message": "This recipe will not keep you full for long. Plan it as a snack, appetizer, or pair it with something more substantial.",
-          "client_encouragement": "Perfect as a light start or side. Just know you will want more within an hour or two.",
-          "tips": [
-            "Pair with a protein-rich side for sustained energy",
-            "Use as a starter course within a larger meal",
-            "Not suitable as a standalone meal for most dietary goals"
-          ]
-        },
-        "4_to_5": {
-          "label": "Moderate Satiety",
-          "coaching_message": "This recipe will satisfy for 2-3 hours. Good for a standard meal, but you may want a snack later.",
-          "client_encouragement": "A solid meal that covers you for a few hours. Add a protein or fiber-rich side for longer lasting fullness.",
-          "tips": [
-            "Add a side salad or vegetable to increase volume without many calories",
-            "Include a protein source if not already present",
-            "Consider a small protein-rich snack 2-3 hours later"
-          ]
-        },
-        "6_to_7": {
-          "label": "Satisfying Meal",
-          "coaching_message": "This recipe provides good satiety that lasts 3-5 hours. Solid choice for a main meal.",
-          "client_encouragement": "This will keep you going for hours. Exactly what a good meal should do.",
-          "tips": [
-            "A great anchor meal for your day",
-            "Eating slowly enhances the satiety effect",
-            "Pair with water or herbal tea for added fullness"
-          ]
-        },
-        "8_to_10": {
-          "label": "Very Filling",
-          "coaching_message": "This recipe provides excellent, long-lasting satiety. You will likely feel full for 5+ hours.",
-          "client_encouragement": "This meal will power you through a long stretch. Great for busy days when you cannot stop to eat.",
-          "tips": [
-            "Excellent choice before a long work stretch or workout",
-            "Be mindful of portion size if your goal is calorie reduction despite the high satiety",
-            "These recipes are ideal for preventing evening snacking when eaten at lunch",
-            "Consider a smaller portion if eating before a workout to avoid heaviness"
+            "Do a complete shop the day before and verify every item",
+            "Set out every pre-measured ingredient before you begin cooking",
+            "Consider whether any ingredients can be prepped a day ahead"
           ]
         }
       }
@@ -479,114 +340,53 @@
         }
       }
     },
-    "pan_efficiency": {
-      "dimension_ref": "pan_efficiency.json",
-      "note": "Lower scores (1-2) mean most efficient (fewest pans), higher scores (8-10) mean least efficient",
+    "cost": {
+      "dimension_ref": "cost.json",
+      "note": "Score reflects estimated cost per serving (1-2 = budget, 9-10 = splurge). Author provides a total for the recipe's stated servings; the serving calculator scales it.",
       "score_ranges": {
         "1_to_2": {
-          "label": "One-Pan Wonder",
-          "coaching_message": "Minimal dishes required. Perfect for busy nights or when you want zero fuss.",
-          "client_encouragement": "Dinner and barely any dishes. This is the dream.",
+          "label": "Budget Friendly",
+          "coaching_message": "Very low cost per serving. An easy choice when stretching a grocery budget.",
+          "client_encouragement": "Cheap, cheerful, and easy on the wallet. Perfect for regular rotation.",
           "tips": [
-            "Memorize these recipes for your busiest nights",
-            "Consider doubling since cleanup is negligible"
+            "Great backbone for a weekly meal plan",
+            "Batch-cook to drive the per-serving cost even lower"
           ]
         },
         "3_to_4": {
-          "label": "Efficient",
-          "coaching_message": "A reasonable number of pans with some reuse potential. Standard weeknight cooking.",
-          "client_encouragement": "A few pots and pans, nothing overwhelming. Clean as you go and it is manageable.",
+          "label": "Everyday Cost",
+          "coaching_message": "A typical weeknight price per serving. Reasonable for regular cooking.",
+          "client_encouragement": "Solid value for a normal meal. Nothing that will dent the budget.",
           "tips": [
-            "Wash the first pan while the second is cooking",
-            "Consider if any pan can serve double duty"
+            "Buy core ingredients in larger sizes when they keep well",
+            "Watch for sales on the main protein to bring the cost down"
           ]
         },
         "5_to_6": {
-          "label": "Moderate Pans",
-          "coaching_message": "Several pans in use. Plan your sink space and timing.",
-          "client_encouragement": "It takes a few tools but nothing unusual. A quick rinse strategy keeps the sink clear.",
+          "label": "Moderate Spend",
+          "coaching_message": "A step up in cost per serving. Fine in the rotation, but not the cheapest option.",
+          "client_encouragement": "Worth it now and then. Balance it with budget-friendly meals across the week.",
           "tips": [
-            "Start a hot soapy soak bowl before cooking",
-            "Use parchment or foil wherever possible to reduce scrubbing",
-            "Wash during passive cooking times (simmering, baking)"
+            "Pair pricier mains with inexpensive sides to balance the plate cost",
+            "Scale servings up so leftovers spread the cost across more meals"
           ]
         },
         "7_to_8": {
-          "label": "Many Pans",
-          "coaching_message": "This recipe uses a significant number of pans and tools. Consider if it is worth the cleanup.",
-          "client_encouragement": "More pans means more flavor layers. Decide if the experience justifies the cleanup.",
+          "label": "Premium",
+          "coaching_message": "A higher cost per serving. Best treated as a planned treat rather than an everyday meal.",
+          "client_encouragement": "A treat-yourself meal. Plan for it and savor it.",
           "tips": [
-            "Check if you can consolidate steps into fewer pans",
-            "Make extra portions to amortize the cleanup cost across multiple meals",
-            "Assign cleanup to someone else as a trade for a home-cooked meal",
-            "Use the cooking_steps substitution strategies to reduce pan count"
+            "Reserve for occasions where the splurge is the point",
+            "Check whether a cheaper cut or ingredient swap keeps most of the appeal"
           ]
         },
         "9_to_10": {
-          "label": "Full Kitchen Deployment",
-          "coaching_message": "This recipe uses nearly every pan you own. Reserve for occasions when the experience matters more than the cleanup.",
-          "client_encouragement": "This is a special-occasion meal. The flavors and experience are worth pulling out all the stops.",
+          "label": "Splurge",
+          "coaching_message": "A very high cost per serving. A special-occasion recipe to budget for deliberately.",
+          "client_encouragement": "This is a celebration meal. When the occasion calls for it, it is worth every dollar.",
           "tips": [
-            "Empty the dishwasher before starting so everything can go straight in after",
-            "Designate a cleanup person before you begin cooking",
-            "Use paper or disposable liners wherever safe",
-            "Consider making this a group cooking activity to share the work and the cleanup"
-          ]
-        }
-      }
-    },
-    "sections": {
-      "dimension_ref": "sections.json",
-      "score_ranges": {
-        "1_to_2": {
-          "label": "Simple Dish",
-          "coaching_message": "A single-component dish or one with a very simple side. Nothing to coordinate.",
-          "client_encouragement": "No timing puzzles here. Just cook and serve.",
-          "tips": [
-            "Great default recipe for when you do not want to think about coordination"
-          ]
-        },
-        "3_to_4": {
-          "label": "Two-Component Meal",
-          "coaching_message": "A main with a side. Light coordination needed to time them together.",
-          "client_encouragement": "Cook the longer component first, then start the shorter one so both finish at the same time.",
-          "tips": [
-            "Start the component with the longest cook time first",
-            "Keep the finished component warm while finishing the other"
-          ]
-        },
-        "5_to_6": {
-          "label": "Multi-Component Meal",
-          "coaching_message": "Three or more components that need to come together. Timing and coordination become important.",
-          "client_encouragement": "Think of it as conducting an orchestra: each component has its moment. Plan the sequence.",
-          "tips": [
-            "Write down a timeline working backwards from when you want to eat",
-            "Identify which components can stay warm and which must be served immediately",
-            "Prep all components before starting any cooking",
-            "Use the oven for items that can hold warm while you finish stovetop components"
-          ]
-        },
-        "7_to_8": {
-          "label": "Complex Assembly",
-          "coaching_message": "Multiple sections that must be coordinated and assembled. Stagger your start times carefully.",
-          "client_encouragement": "This is restaurant-level coordination at home. Treat it like a project with a timeline.",
-          "tips": [
-            "Create a minute-by-minute timeline from the recipe",
-            "Set multiple timers with labels for each component",
-            "Use a whiteboard or paper to track what is in the oven, on the stove, and resting",
-            "Accept help if offered: one person manages the main component while another handles sides"
-          ]
-        },
-        "9_to_10": {
-          "label": "Culinary Orchestration",
-          "coaching_message": "A highly complex multi-section dish requiring precise timing and assembly. Professional-level coordination.",
-          "client_encouragement": "This is a true cooking achievement. Professional kitchens have teams for this level of coordination.",
-          "tips": [
-            "Practice each section individually before attempting the full dish",
-            "Enlist at least one helper for service timing",
-            "Do a dry run the day before to identify timing issues",
-            "Prepare any make-ahead components the day before",
-            "Focus on the final assembly moment: have all components ready and at the correct temperature before assembling"
+            "Save for milestones and celebrations",
+            "Make exactly the servings you need to avoid costly waste"
           ]
         }
       }

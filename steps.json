@@ -1,0 +1,36 @@
+{
+  "metric": "steps",
+  "description": "Number of discrete steps in the recipe. Parallel/simultaneous steps are counted individually, since even seemingly simple recipes can hide 20+ steps in a single section.",
+  "renamed_from": "cooking_steps",
+  "unit": "count",
+  "scale": {
+    "min": 1,
+    "max": 10
+  },
+  "orientation": "higher = more steps",
+  "field": {
+    "count": "Total number of discrete steps across the whole recipe, counting parallel steps individually"
+  },
+  "scoring": {
+    "method": "raw count mapped to a 1-10 mesh axis via buckets",
+    "mesh_axis_buckets": {
+      "1_to_2": 1,
+      "3_to_4": 2,
+      "5_to_6": 3,
+      "7_to_9": 4,
+      "10_to_12": 5,
+      "13_to_16": 6,
+      "17_to_20": 7,
+      "21_to_25": 8,
+      "26_to_30": 9,
+      "over_30": 10
+    }
+  },
+  "anchors": {
+    "make_tea": 1,
+    "scrambled_eggs": 3,
+    "pasta_with_sauce": 8,
+    "croissant": 20,
+    "beef_wellington": 30
+  }
+}
